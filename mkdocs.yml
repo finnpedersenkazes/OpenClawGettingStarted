@@ -61,9 +61,9 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started:
+      - Computer Setup: Computer.md
       - Installing: Installing.md
       - Onboarding: Onboarding.md
-      - Computer Setup: Computer.md
   - Configuration:
       - AI Models: Models.md
       - Identities: Identities.md
