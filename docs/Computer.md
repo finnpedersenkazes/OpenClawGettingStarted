@@ -1,34 +1,33 @@
 # Computer
 
-# Virtual Ubuntu on Windows Lenovo
+## Virtual Ubuntu on Windows Lenovo
 
-- VMware Workstation Pro 25  
-- Ubuntu 25  
-- Standard configuration  
+- VMware Workstation Pro 25
+- Ubuntu 25
+- Standard configuration
 - Install updates
 
 Go to install OpenClaw.
 
-# Virtual macOS on Mac mini
+## Virtual macOS on Mac mini
 
 - Orka Desktop
 
-# VMware Fusion Pro 25
+## VMware Fusion Pro 25
 
-- Ubuntu 25  
-- Standard configuration  
-- Install updates  
-- 
+- Ubuntu 25
+- Standard configuration
+- Install updates
 
-# Raspberry Pi
+## Raspberry Pi
 
 Virtual Machine
 
-VMware Fusion  
+VMware Fusion
 VMware Workstation
 
-# Virtual Private Server
+## Virtual Private Server
 
-## VPS Hosting
+### VPS Hosting
 
 to be written

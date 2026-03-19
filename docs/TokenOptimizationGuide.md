@@ -8,9 +8,9 @@ From $1,500+/month to under $50/month
 
 > WHAT YOU'LL ACHIEVE
 >
-> 97% Token Reduction  •  5 Minutes to Implement  •  No Complex Setup
+> 97% Token Reduction • 5 Minutes to Implement • No Complex Setup
 >
-> Free Local Heartbeat  •  Smart Model Routing  •  Session Management
+> Free Local Heartbeat • Smart Model Routing • Session Management
 
 ## **ScaleUP Media**
 
@@ -24,9 +24,9 @@ If you've been running OpenClaw and watching your API bills climb, you're not al
 
 This guide covers four key optimizations that work together to slash your costs:
 
-1. Session Initialization — Stop loading 50KB of history on every message  
-2. Model Routing — Use Haiku for routine tasks, Sonnet only when needed  
-3. Heartbeat to Ollama — Move your heartbeat checks to a free local LLM  
+1. Session Initialization — Stop loading 50KB of history on every message
+2. Model Routing — Use Haiku for routine tasks, Sonnet only when needed
+3. Heartbeat to Ollama — Move your heartbeat checks to a free local LLM
 4. Rate Limits & Budgets — Prevent runaway automation from burning tokens
 
 > **Why This Matters**
@@ -55,39 +55,39 @@ Add this session initialization rule to your agent's system prompt. It tells you
 SESSION INITIALIZATION RULE:
 On every session start:
 
-1. Load ONLY these files:    
-- SOUL.md    
-- USER.md    
-- IDENTITY.md    
-- memory/YYYY-MM-DD.md (if it exists)   
+1. Load ONLY these files:
+- SOUL.md
+- USER.md
+- IDENTITY.md
+- memory/YYYY-MM-DD.md (if it exists)
 
-2. DO NOT auto-load:    
-- MEMORY.md    
-- Session history    
-- Prior messages    
-- Previous tool outputs   
+2. DO NOT auto-load:
+- MEMORY.md
+- Session history
+- Prior messages
+- Previous tool outputs
 
-3. When user asks about prior context:    
-- Use memory_search() on demand    
-- Pull only the relevant snippet with memory_get()    
-- Don't load the whole file   
+3. When user asks about prior context:
+- Use memory_search() on demand
+- Pull only the relevant snippet with memory_get()
+- Don't load the whole file
 
-4. Update memory/YYYY-MM-DD.md at end of session with:    
-- What you worked on    
-- Decisions made    
-- Leads generated    
-- Blockers    
-- Next steps   
+4. Update memory/YYYY-MM-DD.md at end of session with:
+- What you worked on
+- Decisions made
+- Leads generated
+- Blockers
+- Next steps
 
 This saves 80% on context overhead.
 ```
 
 #### **Why This Works**
 
-* Session starts with 8KB instead of 50KB  
-* History loads only when asked  
-* Daily notes become your actual memory  
-* Works with any interface — no built-in session clearing needed
+- Session starts with 8KB instead of 50KB
+- History loads only when asked
+- Daily notes become your actual memory
+- Works with any interface — no built-in session clearing needed
 
 #### **Results: Before & After**
 
@@ -143,11 +143,11 @@ Add or update your config with these model settings:
 >
 > Default: Always use Haiku Switch to Sonnet ONLY when:
 >
-> * Architecture decisions
-> * Production code review
-> * Security analysis
-> * Complex debugging/reasoning
-> * Strategic multi-project decisions
+> - Architecture decisions
+> - Production code review
+> - Security analysis
+> - Complex debugging/reasoning
+> - Strategic multi-project decisions
 >
 > When in doubt: Try Haiku first.
 
@@ -169,11 +169,11 @@ OpenClaw sends periodic heartbeat checks to verify your agent is running and res
 If you don't already have Ollama installed, grab it from ollama.ai or run:
 
 ```bash
-# macOS / Linux 
-curl \-fsSL https://ollama.ai/install.sh | sh   
+# macOS / Linux
+curl \-fsSL https://ollama.ai/install.sh | sh
 
-# Then pull a lightweight model for heartbeats 
-ollama pull llama3.2:3b 
+# Then pull a lightweight model for heartbeats
+ollama pull llama3.2:3b
 ```
 
 > **Why llama3.2:3b?**
@@ -224,13 +224,13 @@ Update your config at \~/.openclaw/openclaw.json to route heartbeats to Ollama:
 
 ```bash
 
-# Make sure Ollama is running 
-ollama serve   
+# Make sure Ollama is running
+ollama serve
 
-# In another terminal, test the model 
-ollama run llama3.2:3b "respond with OK"   
+# In another terminal, test the model
+ollama run llama3.2:3b "respond with OK"
 
-# Should respond quickly with "OK" or similar 
+# Should respond quickly with "OK" or similar
 ```
 
 #### **Results: Before & After**
@@ -250,11 +250,11 @@ Even with model routing and optimized sessions, runaway automation can still bur
 
 > RATE LIMITS:
 >
-> * 5 seconds minimum between API calls
-> * 10 seconds between web searches
-> * Max 5 searches per batch, then 2-minute break
-> * Batch similar work (one request for 10 leads, not 10 requests)
-> * If you hit 429 error: STOP, wait 5 minutes, retry
+> - 5 seconds minimum between API calls
+> - 10 seconds between web searches
+> - Max 5 searches per batch, then 2-minute break
+> - Batch similar work (one request for 10 leads, not 10 requests)
+> - If you hit 429 error: STOP, wait 5 minutes, retry
 >
 > DAILY BUDGET: $5 (warning at 75%)
 >
@@ -287,22 +287,23 @@ This file defines your agent's core principles and operating rules:
 
 ```md
 # SOUL.md
-   
+
 ## Core Principles
+
 [YOUR AGENT PRINCIPLES HERE]
 
-## How to Operate   
+## How to Operate
 
-See OPTIMIZATION.md for model routing and rate limits.   
+See OPTIMIZATION.md for model routing and rate limits.
 
-## Model Selection   
+## Model Selection
 
-Default: Haiku 
-Switch to Sonnet only for: architecture, security, complex reasoning   
+Default: Haiku
+Switch to Sonnet only for: architecture, security, complex reasoning
 
-## Rate Limits   
+## Rate Limits
 
-5s between API calls, 10s between searches, max 5/batch then 2min break 
+5s between API calls, 10s between searches, max 5/batch then 2min break
 ```
 
 ### **USER.md Template**
@@ -311,16 +312,16 @@ This file gives your agent context about you and your goals:
 
 ```md
 # USER.md
-   
-   - **Name:** [YOUR NAME] 
-   - **Timezone:** [YOUR TIMEZONE] 
-   - **Mission:** [WHAT YOU'RE BUILDING]
-   
-## Success Metrics   
 
-- [METRIC 1] 
-- [METRIC 2] 
-- [METRIC 3] 
+- **Name:** [YOUR NAME]
+- **Timezone:** [YOUR TIMEZONE]
+- **Mission:** [WHAT YOU'RE BUILDING]
+
+## Success Metrics
+
+- [METRIC 1]
+- [METRIC 2]
+- [METRIC 3]
 ```
 
 > **Keep It Lean**
@@ -343,8 +344,8 @@ This file gives your agent context about you and your goals:
 
 When you send content to Claude:
 
-1. **First request:** Full price (1 token \= $0.003)  
-2. **Claude stores it in cache:** Marked for reuse  
+1. **First request:** Full price (1 token \= $0.003)
+2. **Claude stores it in cache:** Marked for reuse
 3. **Subsequent requests (within 5 minutes):** 90% discount ($0.00003 per token)
 
 > **What This Means**
@@ -375,7 +376,7 @@ OpenClaw automatically uses prompt caching when available. To maximize cache hit
    │   ├── MEMORY.md               ← Don't cache (frequently updated)
    │   └── 2026-02-03.md           ← Don't cache (daily notes)
    └── projects/
-       └── [PROJECT]/REFERENCE.md  ← Cache this (stable docs) 
+       └── [PROJECT]/REFERENCE.md  ← Cache this (stable docs)
 ```
 
 ### **Step 3: Enable Caching in Config**
@@ -428,25 +429,25 @@ To maximize cache efficiency:
 
 #### **1\. Batch requests within 5-minute windows**
 
-* Make multiple API calls in quick succession  
-* Reduces cache misses between requests
+- Make multiple API calls in quick succession
+- Reduces cache misses between requests
 
 #### **2\. Keep system prompts stable**
 
-* Don't update SOUL.md mid-session  
-* Changes invalidate cache; batch them during maintenance windows
+- Don't update SOUL.md mid-session
+- Changes invalidate cache; batch them during maintenance windows
 
 #### **3\. Organize context hierarchically**
 
-* Core system prompt (highest priority)  
-* Stable workspace files  
-* Dynamic daily notes (uncached)
+- Core system prompt (highest priority)
+- Stable workspace files
+- Dynamic daily notes (uncached)
 
 #### **4\. For projects: Separate stable from dynamic**
 
-* product-reference.md (stable, cached)  
-* project-notes.md (dynamic, uncached)  
-* Prevents cache invalidation from note updates
+- product-reference.md (stable, cached)
+- project-notes.md (dynamic, uncached)
+- Prevents cache invalidation from note updates
 
 ### **Real-World Example: Outreach Campaign**
 
@@ -474,25 +475,25 @@ You're running 50 outreach email drafts per week using Sonnet (reasoning \+ pers
 
 ### **Step 5: Monitor Cache Performance**
 
-Check cache effectiveness with session\_status:
+Check cache effectiveness with session_status:
 
 ```bash
-openclaw shell 
+openclaw shell
 session_status
 
-# Look for cache metrics: 
-# Cache hits: 45/50 (90%) 
-# Cache tokens used: 225KB (vs 250KB without cache) 
-# Cost savings: $0.22 this session 
+# Look for cache metrics:
+# Cache hits: 45/50 (90%)
+# Cache tokens used: 225KB (vs 250KB without cache)
+# Cost savings: $0.22 this session
 ```
 
 Or query the API directly:
 
 ```bash
-# Check your usage over 24h 
+# Check your usage over 24h
 
 curl https://api.anthropic.com/v1/usage \
-   -H "Authorization: Bearer $ANTHROPIC_API_KEY" | jq '.usage.cache' 
+   -H "Authorization: Bearer $ANTHROPIC_API_KEY" | jq '.usage.cache'
 ```
 
 #### **Metrics to Track**
@@ -519,20 +520,20 @@ Caching multiplies the benefit of earlier optimizations:
 
 ### **When to NOT Use Caching**
 
-* **Haiku tasks (too cheap to cache):** Caching overhead \> savings  
-* **Frequent prompt changes:** Cache invalidation costs more than caching saves  
-* **Small requests (\< 1KB):** Caching overhead eats the discount  
-* **Development/testing:** Too many prompt iterations; cache thrashing
+- **Haiku tasks (too cheap to cache):** Caching overhead \> savings
+- **Frequent prompt changes:** Cache invalidation costs more than caching saves
+- **Small requests (\< 1KB):** Caching overhead eats the discount
+- **Development/testing:** Too many prompt iterations; cache thrashing
 
 ### **Best Practices Checklist**
 
-* Cache stable system prompts (SOUL.md, USER.md)  
-* Batch requests within 5-minute windows  
-* Keep reference docs in separate cached files  
-* Monitor cache hit rate (target: \> 80%)  
-* Combine caching with model routing (Sonnet \+ cache \= max savings)  
-* Update system prompts during maintenance windows, not live  
-* Document cache strategy in TOOLS.md for consistency
+- Cache stable system prompts (SOUL.md, USER.md)
+- Batch requests within 5-minute windows
+- Keep reference docs in separate cached files
+- Monitor cache hit rate (target: \> 80%)
+- Combine caching with model routing (Sonnet \+ cache \= max savings)
+- Update system prompts during maintenance windows, not live
+- Document cache strategy in TOOLS.md for consistency
 
 > **The Bottom Line**
 >
@@ -545,32 +546,32 @@ After making these changes, verify everything is working correctly:
 ### **Check Your Configuration**
 
 ```bash
-# Start a session 
-openclaw shell   
+# Start a session
+openclaw shell
 
-# Check current status 
-session_status   
+# Check current status
+session_status
 
-# You should see: 
-# - Context size: 2-8KB (not 50KB+) 
-# - Model: Haiku (not Sonnet) 
-# - Heartbeat: Ollama/local 
+# You should see:
+# - Context size: 2-8KB (not 50KB+)
+# - Model: Haiku (not Sonnet)
+# - Heartbeat: Ollama/local
 ```
 
 #### **Signs It's Working**
 
-* Context size shows 2-8KB instead of 50KB+  
-* Default model shows as Haiku  
-* Heartbeat shows Ollama/local (not API)  
-* Routine tasks complete without switching to Sonnet  
-* Daily costs drop to $0.10-0.50 range
+- Context size shows 2-8KB instead of 50KB+
+- Default model shows as Haiku
+- Heartbeat shows Ollama/local (not API)
+- Routine tasks complete without switching to Sonnet
+- Daily costs drop to $0.10-0.50 range
 
 #### **Troubleshooting**
 
-* Context size still large → Check session initialization rules are in system prompt  
-* Still using Sonnet for everything → Verify config.json syntax and path  
-* Heartbeat errors → Make sure Ollama is running (ollama serve)  
-* Costs haven't dropped → Check your system prompt is being loaded
+- Context size still large → Check session initialization rules are in system prompt
+- Still using Sonnet for everything → Verify config.json syntax and path
+- Heartbeat errors → Make sure Ollama is running (ollama serve)
+- Costs haven't dropped → Check your system prompt is being loaded
 
 ## **Quick Reference Checklist**
 
@@ -590,7 +591,7 @@ Use this checklist to make sure you've completed all the steps:
 | ☐   | Added RATE LIMITS to system prompt                    |
 | ☐   | Created SOUL.md with core principles                  |
 | ☐   | Created USER.md with your info                        |
-| ☐   | Verified with session\_status command                 |
+| ☐   | Verified with session_status command                  |
 
 > **The Bottom Line**
 >
