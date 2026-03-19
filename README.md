@@ -8,8 +8,8 @@ It provides practical guides for installation, onboarding, configuration, securi
 
 ### Getting Started
 
-- [ ] Computer Setup
-- [x] Installing
+- [ ] Setting up the host
+- [x] Installing OpenClaw
 - [ ] Onboarding
 
 ### Configuration

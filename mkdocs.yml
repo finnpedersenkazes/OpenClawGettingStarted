@@ -61,7 +61,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started:
-      - Computer Setup: Computer.md
+      - Host: Host.md
       - Installing: Installing.md
       - Onboarding: Onboarding.md
   - Configuration:
@@ -71,5 +71,5 @@ nav:
   - Reference:
       - Tools: Tools.md
       - Skills: Skills.md
-      - Token Optimization: TokenOptimizationGuide.md
+      - Costs: TokenOptimizationGuide.md
       - Dictionary: Dictonary.md

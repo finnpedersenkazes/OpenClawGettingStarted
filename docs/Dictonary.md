@@ -1,1 +1,5 @@
 # Dictionary
+
+## <Term>
+
+<Short Description>
