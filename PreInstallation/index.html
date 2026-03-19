@@ -519,6 +519,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#install-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Ollama
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -908,6 +919,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#install-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Ollama
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -955,6 +977,16 @@
 <h2 id="install-git">Install Git<a class="headerlink" href="#install-git" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo apt update
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo apt install git
+</code></pre></div>
+<h2 id="install-ollama">Install Ollama<a class="headerlink" href="#install-ollama" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>curl -fsSL https://ollama.ai/install.sh | sh
+</code></pre></div>
+<p>Then pull a lightweight model for local heartbeats:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ollama pull llama3.2:3b
+</code></pre></div>
+<p>If you want to verify it's working:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ollama serve
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>ollama run llama3.2:3b &quot;respond with OK&quot;
 </code></pre></div>
 
 
