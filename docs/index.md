@@ -7,7 +7,7 @@ Welcome to the OpenClaw Getting Started guide. This documentation covers everyth
 | Topic                                                      | Description                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------- |
 | :material-desktop-classic: [Host](Host.md)                 | Supported environments: VMs, Raspberry Pi, VPS, and more.               |
-| :material-download: [Installing](Installing.md)            | Step-by-step instructions for installing OpenClaw on various platforms. |
+| :material-download: [Installation](Installation.md)          | Step-by-step instructions for installing OpenClaw on various platforms. |
 | :material-rocket-launch: [Onboarding](Onboarding.md)       | Walk through the initial setup and configuration wizard.                |
 | :material-account-group: [Identities](Identities.md)       | Configure agent identities and email addresses.                         |
 | :material-robot: [AI Models](Models.md)                    | Supported AI model providers and configurations.                        |

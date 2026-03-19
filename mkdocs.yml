@@ -62,7 +62,7 @@ nav:
   - Home: index.md
   - Getting Started:
       - Host: Host.md
-      - Installing: Installing.md
+      - Installation: Installation.md
       - Onboarding: Onboarding.md
   - Configuration:
       - AI Models: Models.md

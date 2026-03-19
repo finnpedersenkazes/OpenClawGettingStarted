@@ -34,7 +34,7 @@ node -v # Should print "v24.14.0".
 npm -v # Should print "11.9.0".
 ```
 
-## Install Git
+### Install Git
 
 ```
 sudo apt update
