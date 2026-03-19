@@ -62,10 +62,11 @@ nav:
   - Home: index.md
   - Getting Started:
       - Host: Host.md
-      - Installation: Installation.md
-      - Onboarding: Onboarding.md
-  - Configuration:
       - AI Models: Models.md
+      - Onboarding: Onboarding.md
+      - Pre-installation: PreInstallation.md
+      - Installation: Installation.md
+  - Configuration:
       - Identities: Identities.md
       - Security: Security.md
   - Reference:

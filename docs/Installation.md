@@ -1,53 +1,10 @@
-# Installing OpenClaw
-
-## Before installing OpenClaw
-
-On a brand new computer or clean VM.
-
-### Install Curl (Client URL)
-
-```
-sudo apt update
-sudo apt install curl
-```
-
-### Install Node.js
-
-https://nodejs.org/en/download
-
-Copy paste the following into the terminal.
-
-```
-# Download and install nvm:
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
-
-# in lieu of restarting the shell
-\. "$HOME/.nvm/nvm.sh"
-
-# Download and install Node.js:
-nvm install 24
-
-# Verify the Node.js version:
-node -v # Should print "v24.14.0".
-
-# Verify npm version:
-npm -v # Should print "11.9.0".
-```
-
-### Install Git
-
-```
-sudo apt update
-sudo apt install git
-```
-
-## Install OpenClaw
+# Install OpenClaw
 
 ```
 alex@alex-ubuntu-vm:~$ curl -fsSL https://openclaw.ai/install.sh | bash
 ```
 
-### 🦞 OpenClaw Installer
+## 🦞 OpenClaw Installer
 
 ```
 I'll butter your workflow like a lobster roll: messy, delicious, effective.
@@ -81,7 +38,7 @@ Requested version: latest
 cracks claws Alright, what are we building?
 ```
 
-### Starting setup
+## Starting setup
 
 ```
 🦞 OpenClaw 2026.3.13 (61d171a) — Hot reload for config, cold sweat for deploys.
