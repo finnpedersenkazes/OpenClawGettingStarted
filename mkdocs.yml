@@ -1,9 +1,9 @@
 site_name: OpenClaw Getting Started
 site_description: Getting started guide for OpenClaw — setup, configuration, and optimization.
-site_url: https://FinnPedersen.github.io/OpenClawGettingStarted/
+site_url: https://www.finnpedersenfrance.com/OpenClawGettingStarted/
 
-repo_name: FinnPedersen/OpenClawGettingStarted
-repo_url: https://github.com/FinnPedersen/OpenClawGettingStarted
+repo_name: finnpedersenkazes/OpenClawGettingStarted
+repo_url: https://github.com/finnpedersenkazes/OpenClawGettingStarted
 
 theme:
   name: material
