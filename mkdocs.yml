@@ -63,9 +63,9 @@ nav:
   - Getting Started:
       - Host: Host.md
       - AI Models: Models.md
-      - Onboarding: Onboarding.md
       - Pre-installation: PreInstallation.md
       - Installation: Installation.md
+      - Onboarding: Onboarding.md
   - Configuration:
       - Identities: Identities.md
       - Security: Security.md
