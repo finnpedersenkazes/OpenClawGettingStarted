@@ -2,7 +2,7 @@
 
 ## Before installing OpenClaw
 
-On a brand new computer or clean VM. 
+On a brand new computer or clean VM.
 
 ### Install Curl (Client URL)
 
@@ -34,7 +34,6 @@ node -v # Should print "v24.14.0".
 npm -v # Should print "11.9.0".
 ```
 
-
 ## Install Git
 
 ```
@@ -42,14 +41,13 @@ sudo apt update
 sudo apt install git
 ```
 
-
-# Install OpenClaw
+## Install OpenClaw
 
 ```
 alex@alex-ubuntu-vm:~$ curl -fsSL https://openclaw.ai/install.sh | bash
 ```
 
-## 🦞 OpenClaw Installer
+### 🦞 OpenClaw Installer
 
 ```
 I'll butter your workflow like a lobster roll: messy, delicious, effective.
@@ -83,7 +81,7 @@ Requested version: latest
 cracks claws Alright, what are we building?
 ```
 
-## Starting setup
+### Starting setup
 
 ```
 🦞 OpenClaw 2026.3.13 (61d171a) — Hot reload for config, cold sweat for deploys.
@@ -93,8 +91,8 @@ cracks claws Alright, what are we building?
 ██░███░██░▀▀░██░▄▄▄██░█░█░██░█████░████░▀▀░██░█░█░██
 ██░▀▀▀░██░█████░▀▀▀██░██▄░██░▀▀▄██░▀▀░█░██░██▄▀▄▀▄██
 ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-                  🦞 OPENCLAW 🦞                    
- 
+                  🦞 OPENCLAW 🦞
+
 ┌  OpenClaw onboarding
 │
 ◇  Security ─────────────────────────────────────────────────────────────────────────────────╮
@@ -110,7 +108,7 @@ cracks claws Alright, what are we building?
 │  If multiple users can message one tool-enabled agent, they share that delegated tool      │
 │  authority.                                                                                │
 │                                                                                            │
-│  If you’re not comfortable with security hardening and access control, don’t run           │
+│  If you're not comfortable with security hardening and access control, don't run           │
 │  OpenClaw.                                                                                 │
 │  Ask someone experienced to help before enabling tools or exposing it to the internet.     │
 │                                                                                            │
@@ -121,7 +119,7 @@ cracks claws Alright, what are we building?
 │  - Sandbox + least-privilege tools.                                                        │
 │  - Shared inboxes: isolate DM sessions (`session.dmScope: per-channel-peer`) and keep      │
 │    tool access minimal.                                                                    │
-│  - Keep secrets out of the agent’s reachable filesystem.                                   │
+│  - Keep secrets out of the agent's reachable filesystem.                                   │
 │  - Use the strongest available model for any bot with tools or untrusted inboxes.          │
 │                                                                                            │
 │  Run regularly:                                                                            │

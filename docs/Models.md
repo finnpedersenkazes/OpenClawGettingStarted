@@ -1,6 +1,5 @@
 # AI Models
 
-
 | Provider   | Model             |
 | ---------- | ----------------- |
 | OpenAI     | gpt-5.4           |
