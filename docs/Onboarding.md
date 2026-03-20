@@ -172,7 +172,21 @@ Then send `/newbot` and let it guide you through the process. When asked give it
 
 > Note: The user name has to be unique and end with `_bot`.
 
-It will then give you the token that you need.
+It will then give you the token that you need along with a link to your bot.
+Click the **START** button at the bottom.
+
+You should see a message like this:
+
+```
+OpenClaw: access not configured.
+
+Your Telegram user id: <10 digit number>
+
+Pairing code: <8 character code>
+
+Ask the bot owner to approve with:
+openclaw pairing approve telegram <8 character code>
+```
 
 ```
 ◇  Select channel (QuickStart)
