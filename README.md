@@ -10,17 +10,17 @@ It provides practical guides for installation, onboarding, configuration, securi
 
 - [x] Setting up the host
 - [x] Installing OpenClaw
-- [ ] Onboarding
+- [x] Onboarding
 
 ### Configuration
 
-- [ ] AI Models
+- [x] AI Models
 - [ ] Identities
 - [ ] Security
 
 ### Reference
 
-- [ ] Tools
-- [ ] Skills
+- [x] Skills
+- [x] Tools
 - [ ] Token Optimization
 - [ ] Dictionary

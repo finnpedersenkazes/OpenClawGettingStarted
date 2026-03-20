@@ -70,7 +70,7 @@ nav:
       - Identities: Identities.md
       - Security: Security.md
   - Reference:
-      - Tools: Tools.md
       - Skills: Skills.md
+      - Tools: Tools.md
       - Costs: TokenOptimizationGuide.md
       - Dictionary: Dictonary.md
