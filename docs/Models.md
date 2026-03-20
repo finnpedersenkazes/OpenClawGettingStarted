@@ -1,6 +1,8 @@
 # AI Models
 
-Chose your provider.
+Chose your provider and your model.
+
+## Paid Models
 
 | Provider  | Country | Best Model        | Cheap Model           |
 | --------- | ------- | ----------------- | --------------------- |

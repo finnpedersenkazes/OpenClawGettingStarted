@@ -1,10 +1,12 @@
 # Host
 
+Chose one of the following hosts for your OpenClaw installation.
+
 The the **Mac mini** is the YouTube blogger darling.
 
 ## Dedicated Ubuntu Computer
 
-Go to install OpenClaw.
+[Continue to pre-installation.](PreInstallation.md)
 
 ## Virtual Ubuntu on Windows 11
 
@@ -13,11 +15,11 @@ Go to install OpenClaw.
 - Standard configuration
 - Install updates
 
-Go to install OpenClaw.
+[Continue to pre-installation.](PreInstallation.md)
 
 ## Dedicated Mac mini
 
-Go to install OpenClaw.
+[Continue to pre-installation.](PreInstallation.md)
 
 ## Virtual macOS on macOS
 
@@ -25,7 +27,7 @@ Go to install OpenClaw.
 - Get macOS
 - Install updates
 
-Go to install OpenClaw.
+[Continue to pre-installation.](PreInstallation.md)
 
 ## Virtual Ubuntu on macOS
 
@@ -34,7 +36,7 @@ Go to install OpenClaw.
 - Standard configuration
 - Install updates
 
-Go to install OpenClaw.
+[Continue to pre-installation.](PreInstallation.md)
 
 ## Virtual Private Server (VPS)
 
