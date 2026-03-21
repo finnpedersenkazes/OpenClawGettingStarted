@@ -16,7 +16,7 @@
         <link rel="prev" href="../Security/">
       
       
-        <link rel="next" href="../Skills/">
+        <link rel="next" href="../TokenOptimizationGuide/">
       
       
         
@@ -397,34 +397,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../Onboarding/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Onboarding
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../PreInstallation/" class="md-nav__link">
         
   
@@ -461,6 +433,62 @@
     
   
     Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Onboarding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Skills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skills
   
 
     
@@ -755,38 +783,49 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup-the-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup the Workspace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-and-health" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security and Health
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Skills/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Skills
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -920,6 +959,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup-the-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup the Workspace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-and-health" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security and Health
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -943,7 +1021,38 @@
 <h1 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h1>
 <h2 id="email">Email<a class="headerlink" href="#email" title="Permanent link">&para;</a></h2>
 <h3 id="agent-mail">Agent Mail<a class="headerlink" href="#agent-mail" title="Permanent link">&para;</a></h3>
+<p>Go the <a href="https://www.agentmail.to/">AgentMail.to</a> website and signup for a free account. You get three emails.</p>
+<p>Setup an <strong>inbox</strong> and create an <strong>API key</strong>.</p>
+<blockquote>
+<p>Configure the Allow/Block lists</p>
+</blockquote>
+<p>Tell OpenClaw that you have setup agentmail and give it its email address.</p>
+<blockquote>
+<p>I have created an Agent mail for you. This is your new email address: <code>&lt;email address&gt;@agentmail.to</code>
+Get the AgementMail skill from Clawhub.</p>
+</blockquote>
+<p>It will ask you for the <strong>API key</strong>.</p>
 <h3 id="google-mail">Google Mail<a class="headerlink" href="#google-mail" title="Permanent link">&para;</a></h3>
+<p>I started with Gmail, but ran into issues with the token experiring and switched to Agent Mail.</p>
+<p>However, you can consider investigating the <code>gog</code> skill.</p>
+<h2 id="github">GitHub<a class="headerlink" href="#github" title="Permanent link">&para;</a></h2>
+<p>On the GitHub account you want to use, go to Settings, Developer Settings, Personal access tokens.</p>
+<p>Then press <code>Generate new token</code> and choose <strong>Generate new token (Classic)</strong>.</p>
+<p>Give it just the access needed.</p>
+<p>Do not close the page before you have a copy of the token.</p>
+<p>Then give OpenClaw the url to the GitHub profile and it will ask for the token.</p>
+<h3 id="backup-the-workspace">Backup the Workspace<a class="headerlink" href="#backup-the-workspace" title="Permanent link">&para;</a></h3>
+<p>Instruct OpenClaw to make a backup of its Workspace to GitHub.</p>
+<blockquote>
+<p>This is important!</p>
+</blockquote>
+<ul>
+<li>It allows you to investigate the setup</li>
+<li>You can make changes to it</li>
+<li>Check the changes</li>
+</ul>
+<h2 id="security-and-health">Security and Health<a class="headerlink" href="#security-and-health" title="Permanent link">&para;</a></h2>
+<p><a href="../Security/">Next up: Security and Health check</a></p>
 
 
 
