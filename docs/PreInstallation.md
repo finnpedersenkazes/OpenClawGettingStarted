@@ -46,21 +46,13 @@ npm -v # Should print "11.9.0".
 
 Many skill dependencies are shipped via Homebrew.
 
-### Ubuntu
+### Ubuntu and macOS
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-After install, follow the on-screen instructions to add Homebrew to your PATH (typically by adding lines to `~/.bashrc` or `~/.profile`).
-
-### macOS
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-After install, follow the on-screen instructions to add Homebrew to your PATH (typically by adding lines to `~/.zprofile` or `~/.bash_profile`).
+After install, follow the on-screen instructions to add Homebrew to your PATH.
 
 ## Install Git
 

@@ -1,7 +1,7 @@
 # Install OpenClaw
 
 ```bash
-alex@alex-ubuntu-vm:~$ curl -fsSL https://openclaw.ai/install.sh | bash
+curl -fsSL https://openclaw.ai/install.sh | bash
 ```
 
 ## 🦞 OpenClaw Installer

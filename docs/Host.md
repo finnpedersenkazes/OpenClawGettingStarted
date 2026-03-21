@@ -4,6 +4,10 @@ Chose one of the following hosts for your OpenClaw installation.
 
 The the **Mac mini** is the YouTube blogger darling.
 
+## Dedicated Mac mini
+
+[Next up: Choose your AI model.](Models.md)
+
 ## Dedicated Ubuntu Computer
 
 [Next up: Choose your AI model.](Models.md)
@@ -17,18 +21,6 @@ The the **Mac mini** is the YouTube blogger darling.
 
 [Next up: Choose your AI model.](Models.md)
 
-## Dedicated Mac mini
-
-[Next up: Choose your AI model.](Models.md)
-
-## Virtual macOS on macOS
-
-- Install Orka Desktop
-- Get macOS
-- Install updates
-
-[Next up: Choose your AI model.](Models.md)
-
 ## Virtual Ubuntu on macOS
 
 - Install VMware Fusion Pro 25
@@ -37,6 +29,10 @@ The the **Mac mini** is the YouTube blogger darling.
 - Install updates
 
 [Next up: Choose your AI model.](Models.md)
+
+## Virtual macOS on macOS
+
+_This does not work or it is too complicated._
 
 ## Virtual Private Server (VPS)
 
