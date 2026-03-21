@@ -1,12 +1,12 @@
 # Install OpenClaw
 
-```
+```bash
 alex@alex-ubuntu-vm:~$ curl -fsSL https://openclaw.ai/install.sh | bash
 ```
 
 ## 🦞 OpenClaw Installer
 
-```
+```text
 I'll butter your workflow like a lobster roll: messy, delicious, effective.
 
 ✓ Detected: linux
@@ -40,7 +40,7 @@ cracks claws Alright, what are we building?
 
 ## Starting setup
 
-```
+```text
 🦞 OpenClaw 2026.3.13 (61d171a) — Hot reload for config, cold sweat for deploys.
 
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -91,3 +91,7 @@ cracks claws Alright, what are we building?
 │  ○ Yes / ● No
 └
 ```
+
+## Onboarding
+
+[Next up: Onboarding](Onboarding.md)

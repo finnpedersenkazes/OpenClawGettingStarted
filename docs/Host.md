@@ -6,7 +6,7 @@ The the **Mac mini** is the YouTube blogger darling.
 
 ## Dedicated Ubuntu Computer
 
-[Continue to pre-installation.](PreInstallation.md)
+[Next up: Choose your AI model.](Models.md)
 
 ## Virtual Ubuntu on Windows 11
 
@@ -15,11 +15,11 @@ The the **Mac mini** is the YouTube blogger darling.
 - Standard configuration
 - Install updates
 
-[Continue to pre-installation.](PreInstallation.md)
+[Next up: Choose your AI model.](Models.md)
 
 ## Dedicated Mac mini
 
-[Continue to pre-installation.](PreInstallation.md)
+[Next up: Choose your AI model.](Models.md)
 
 ## Virtual macOS on macOS
 
@@ -27,7 +27,7 @@ The the **Mac mini** is the YouTube blogger darling.
 - Get macOS
 - Install updates
 
-[Continue to pre-installation.](PreInstallation.md)
+[Next up: Choose your AI model.](Models.md)
 
 ## Virtual Ubuntu on macOS
 
@@ -36,7 +36,7 @@ The the **Mac mini** is the YouTube blogger darling.
 - Standard configuration
 - Install updates
 
-[Continue to pre-installation.](PreInstallation.md)
+[Next up: Choose your AI model.](Models.md)
 
 ## Virtual Private Server (VPS)
 

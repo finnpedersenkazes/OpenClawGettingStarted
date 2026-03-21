@@ -2,6 +2,15 @@
 
 Chose your provider and your model.
 
+## Before installing OpenClaw
+
+Pick your provider/model and make sure you can authenticate:
+
+- Hosted providers (OpenAI/Anthropic/Google/etc.): have your API key (and/or OAuth token) ready to paste during the installer.
+- Ollama (local models): install Ollama and pull the local model you want to run.
+
+[Continue to pre-installation.](PreInstallation.md)
+
 ## Paid Models
 
 | Provider  | Country | Best Model        | Cheap Model           |
@@ -17,11 +26,10 @@ Chose your provider and your model.
 
 ### Ollama
 
+It is also possible to install OpenClaw directly with Ollama.
+
 https://ollama.com/
 
-## Before installing OpenClaw
-
-Pick your provider/model and make sure you can authenticate:
-
-- Hosted providers (OpenAI/Anthropic/Google/etc.): have your API key (and/or OAuth token) ready to paste during the installer.
-- Ollama (local models): install Ollama and pull the local model you want to run.
+```bash
+ollama launch openclaw
+```

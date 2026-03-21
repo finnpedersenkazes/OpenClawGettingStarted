@@ -107,7 +107,7 @@ Out of the box, OpenClaw typically defaults to using Claude Sonnet for everythin
 
 Your OpenClaw config file is located at:
 
-```bash
+```text
 ~/.openclaw/openclaw.json
 ```
 

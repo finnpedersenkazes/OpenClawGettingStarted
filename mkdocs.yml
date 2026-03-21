@@ -66,11 +66,11 @@ nav:
       - Pre-installation: PreInstallation.md
       - Installation: Installation.md
       - Onboarding: Onboarding.md
+      - Skills: Skills.md
   - Configuration:
       - Identities: Identities.md
       - Security: Security.md
   - Reference:
-      - Skills: Skills.md
       - Tools: Tools.md
       - Costs: TokenOptimizationGuide.md
       - Dictionary: Dictonary.md

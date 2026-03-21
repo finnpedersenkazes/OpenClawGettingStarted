@@ -44,3 +44,7 @@ Instruct OpenClaw to make a backup of its Workspace to GitHub.
 - It allows you to investigate the setup
 - You can make changes to it
 - Check the changes
+
+## Security and Health
+
+[Next up: Security and Health check](Security.md)

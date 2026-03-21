@@ -2,7 +2,7 @@
 
 An agent needs to have some skills to be able to act.
 
-```
+```text
 ◇  Skills status ─────────────╮
 │                             │
 │  Eligible: 4                │
@@ -19,7 +19,7 @@ An agent needs to have some skills to be able to act.
 
 You can choose to install some skills now or wait till later.
 
-```
+```text
 ◇  Configure skills now? (recommended)
 │  Yes
 │
@@ -59,7 +59,7 @@ You can choose to install some skills now or wait till later.
 └
 ```
 
-```
+```text
 ◇  Install missing skill dependencies
 │  🔐 1password, 🧩 clawhub, 🐙 github
 │
@@ -79,7 +79,7 @@ Is optional, but could prove useful.
 
 ## Homebrew
 
-```
+```text
 ◇  Homebrew recommended ──────────────────────────────────────────────────────────╮
 │                                                                                 │
 │  Many skill dependencies are shipped via Homebrew.                              │
@@ -92,7 +92,11 @@ Is optional, but could prove useful.
 └
 ```
 
-```
+> Normally you should have installed Homebrew during the [pre-installation](PreInstallation.md) phase.
+
+If not do it now.
+
+```text
 ◇  Homebrew install ─────────────────────────────────────────────────────╮
 │                                                                        │
 │  Run:                                                                  │
@@ -111,13 +115,13 @@ Is optional, but could prove useful.
 
 ## Preferred node manager
 
-```
+```text
 ◇  Preferred node manager for skill installs
 │  npm
 │
 ```
 
-```
+```text
 ◇  Set GOOGLE_PLACES_API_KEY for goplaces?
 │  No
 │
@@ -140,7 +144,7 @@ Is optional, but could prove useful.
 
 ## Hooks
 
-```
+```text
 ◇  Hooks ──────────────────────────────────────────────────────────────────╮
 │                                                                          │
 │  Hooks let you automate actions when agent commands are issued.          │
@@ -161,7 +165,7 @@ Is optional, but could prove useful.
 
 ## Finalizing
 
-```
+```text
 ◇  Systemd ────────────────────────────────────────────────────────────────────────────────╮
 │                                                                                          │
 │  Linux installs use a systemd user service by default. Without lingering, systemd stops  │
@@ -244,7 +248,7 @@ Session store (main): /home/alex/.openclaw/agents/main/sessions/sessions.json (0
 
 ## TUI
 
-```
+```text
  openclaw tui - ws://127.0.0.1:18789 - agent main - session main
 
  session agent:main:main
@@ -263,6 +267,10 @@ Session store (main): /home/alex/.openclaw/agents/main/sessions/sessions.json (0
 My name is Finn
 ```
 
-```
+```text
 Your name is Alex
 ```
+
+## Tools
+
+[Next up: Tooling](Tools.md)

@@ -2,7 +2,7 @@
 
 ## Onboarding mode
 
-```
+```text
 ◇  I understand this is personal-by-default and shared/multi-user use requires lock-down. Continue?
 │  Yes
 │
@@ -13,7 +13,7 @@
 
 ## Choose a model provider
 
-```
+```text
 ◆  Model/auth provider
 │  ● OpenAI (Codex OAuth + API key)
 │  ○ Anthropic
@@ -55,7 +55,7 @@
 
 Go to [https://platform.claude.com/dashboard](https://platform.claude.com/dashboard)
 
-```
+```text
 ◇  Model/auth provider
 │  Anthropic
 │
@@ -72,7 +72,7 @@ Under `Manage, API Keys` chose **Create Key**. Copy the key and past it in here.
 
 Then choose a cost effective model like **haiku** to be the default model.
 
-```
+```text
 ◇  Enter Anthropic API key
 │  sk-ant-...
 │
@@ -100,7 +100,7 @@ Then choose a cost effective model like **haiku** to be the default model.
 
 ## Channels
 
-```
+```text
 ◇  How channels work ───────────────────────────────────────────────────────────────────────╮
 │                                                                                           │
 │  DM security: default is pairing; unknown DMs get a pairing code.                         │
@@ -177,7 +177,7 @@ Click the **START** button at the bottom.
 
 You should see a message like this:
 
-```
+```text
 OpenClaw: access not configured.
 
 Your Telegram user id: <10 digit number>
@@ -188,7 +188,7 @@ Ask the bot owner to approve with:
 openclaw pairing approve telegram <8 character code>
 ```
 
-```
+```text
 ◇  Select channel (QuickStart)
 │  Telegram (Bot API)
 │
@@ -227,7 +227,7 @@ Sessions OK: ~/.openclaw/agents/main/sessions
 
 Brave Search is the officially recommended OpenClaw search provider for general-purpose web queries.
 
-```
+```text
 │
 ◇  Web search ────────────────────────────────────────╮
 │                                                     │
@@ -254,7 +254,7 @@ Go to the [Brave search API page](https://brave.com/search/api/) and signup.
 Signup with your credit card for the **Search** plan at 5$ per 1000 requests. You get 5$ in free credits, so just set the limit to 5$.
 Then go to the **Dashboard, API** keys and click **Add API key**.
 
-```
+```text
 ◇  Search provider
 │  Brave Search
 │
@@ -262,4 +262,6 @@ Then go to the **Dashboard, API** keys and click **Add API key**.
 │  BSAX....
 ```
 
-[Continue to skills.](Skills.md)
+## Skills
+
+[Next up: Skills.](Skills.md)
