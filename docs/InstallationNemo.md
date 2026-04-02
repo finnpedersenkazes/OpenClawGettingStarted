@@ -236,3 +236,8 @@ Setting up DNS proxy in pod 'nemoclaw-sandbox' (10.200.0.1:53 -> 10.42.0.9)...
   http://127.0.0.1:18789/#token=...
   ──────────────────────────────────────────────────
 ```
+
+```bash
+nemoclaw nemoclaw-sandbox connect
+sandbox@nemoclaw-sandbox:~$ openclaw tui
+```
