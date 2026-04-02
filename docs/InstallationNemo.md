@@ -56,4 +56,44 @@ Done. DNS should resolve in ~10 seconds.
     6) Google Gemini
 
   Choose [1]: 
+
+  ┌─────────────────────────────────────────────────────────────────┐
+  │  NVIDIA API Key required                                        │
+  │                                                                 │
+  │  1. Go to https://build.nvidia.com/settings/api-keys            │
+  │  2. Sign in with your NVIDIA account                            │
+  │  3. Click 'Generate API Key' button                             │
+  │  4. Paste the key below (starts with nvapi-)                    │
+  └─────────────────────────────────────────────────────────────────┘
+
+  NVIDIA API Key: **********************************************************************
+
+  Key saved to ~/.nemoclaw/credentials.json (mode 600)
+
+
+  Cloud models:
+    1) Nemotron 3 Super 120B (nvidia/nemotron-3-super-120b-a12b)
+    2) Kimi K2.5 (moonshotai/kimi-k2.5)
+    3) GLM-5 (z-ai/glm5)
+    4) MiniMax M2.5 (minimaxai/minimax-m2.5)
+    5) GPT-OSS 120B (openai/gpt-oss-120b)
+    6) Other...
+
+  Choose model [1]: 
+  Responses API available — OpenClaw will use openai-responses.
+  Using NVIDIA Endpoints with model: nvidia/nemotron-3-super-120b-a12b
+
+  [4/7] Setting up inference provider
+  ──────────────────────────────────────────────────
+✓ Active gateway set to 'nemoclaw'
+✓ Created provider nvidia-prod
+Gateway inference configured:
+
+  Route: inference.local
+  Provider: nvidia-prod
+  Model: nvidia/nemotron-3-super-120b-a12b
+  Version: 1
+  Timeout: 60s (default)
+  ✓ Inference route set: nvidia-prod / nvidia/nemotron-3-super-120b-a12b
+
 ```
