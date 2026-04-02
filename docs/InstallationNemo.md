@@ -241,3 +241,19 @@ Setting up DNS proxy in pod 'nemoclaw-sandbox' (10.200.0.1:53 -> 10.42.0.9)...
 nemoclaw nemoclaw-sandbox connect
 sandbox@nemoclaw-sandbox:~$ openclaw tui
 ```
+
+```text
+(node:2800) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2808) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+🦞 OpenClaw 2026.3.11 (29dc654) — I've read more man pages than any human should—so you don't have to.
+
+ openclaw tui - ws://127.0.0.1:18789 - agent main - session main                                                                                           
+ connecting | idle                                                                                                                                         
+
+ Pairing required. Run `openclaw devices list`, approve your request ID, then reconnect.                                                                   
+ gateway disconnected: pairing required | pairing required: run openclaw devices list                                                                      
+ agent main | session main | unknown | tokens ?
+```
