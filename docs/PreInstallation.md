@@ -98,6 +98,16 @@ ollama serve
 ollama run llama3.2:3b "respond with OK"
 ```
 
+## Before installing NVIDIA NemoClaw
+
+### OpenShell
+
+https://docs.nvidia.com/openshell/latest/index.html
+
+### Docker Desktop
+
+https://docs.docker.com/desktop/setup/install/linux/ubuntu/
+
 ## Install OpenClaw
 
 [Next up: Install OpenClaw](Installation.md)

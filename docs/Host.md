@@ -1,18 +1,14 @@
 # Host
 
-Chose one of the following hosts for your OpenClaw installation.
+Chose one of the following hosts for your OpenClaw or NVIDIA NemoClaw installation.
 
 The the **Mac mini** is the YouTube blogger darling.
 
-## Dedicated Mac mini
+## OpenClaw on Dedicated Ubuntu Computer
 
 [Next up: Choose your AI model.](Models.md)
 
-## Dedicated Ubuntu Computer
-
-[Next up: Choose your AI model.](Models.md)
-
-## Virtual Ubuntu on Windows 11
+## OpenClaw on Virtual Ubuntu on Windows 11
 
 - Install VMware Workstation Pro 25
 - Get Ubuntu 25 iso
@@ -21,7 +17,15 @@ The the **Mac mini** is the YouTube blogger darling.
 
 [Next up: Choose your AI model.](Models.md)
 
-## Virtual Ubuntu on macOS
+## OpenClaw on Dedicated Mac mini
+
+[Next up: Choose your AI model.](Models.md)
+
+## OpenClaw Virtual macOS on macOS
+
+_We did not find a good solutions for this._
+
+## OpenClaw Virtual Ubuntu on macOS
 
 - Install VMware Fusion Pro 25
 - Get Ubuntu 25 iso
@@ -30,13 +34,33 @@ The the **Mac mini** is the YouTube blogger darling.
 
 [Next up: Choose your AI model.](Models.md)
 
-## Virtual macOS on macOS
+## Virtual Private Server (VPS) on Hostinger
 
-_This does not work or it is too complicated._
+Hostinger has 1-click OpenClaw hosting deal that should get you started without buying a physical computer.
 
-## Virtual Private Server (VPS)
+[OpenClaw hosting on Hostinger.com](https://www.hostinger.com/dk/vps/openclaw-hosting)
 
-_Not described here. Find sources on the internet._
+## NVIDIA NemoClaw on NVIDIA Brev
+
+Go to https://www.nvidia.com/en-us/ai/nemoclaw/ and press `Try It Now`.
+
+## NVIDIA NemoClaw on Dedicated Ubuntu computer
+
+### Prerequisites
+
+| Hardware Requirements | Recommended |
+| --------------------- | ----------- |
+| CPU                   | 4+ vCPU     |
+| RAM                   | 16 GB       |
+| Disk                  | 40 GB       |
+
+| Software Dependencies | Version                   |
+| --------------------- | ------------------------- |
+| Linux                 | Ubuntu 22.04 LTS or later |
+| Node.js               | 22.16 or later            |
+| npm                   | 10 or later               |
+| Docker Desktop        | Installed                 |
+| OpenShell             | Installed                 |
 
 ## Dedicated Windows Computer
 
