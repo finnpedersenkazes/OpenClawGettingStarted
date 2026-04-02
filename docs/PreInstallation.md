@@ -106,7 +106,6 @@ ollama run llama3.2:3b "respond with OK"
 
 ```bash
 curl -LsSf https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh | sh
-openshell sandbox create --from openclaw
 ```
 
 ### Docker Desktop
