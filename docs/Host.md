@@ -62,6 +62,12 @@ Go to https://www.nvidia.com/en-us/ai/nemoclaw/ and press `Try It Now`.
 | Docker Desktop        | Installed                 |
 | OpenShell             | Installed                 |
 
-## Dedicated Windows Computer
+## OpenClaw on Dedicated Windows Computer
 
 _We do not recommend installing OpenClaw on Windows._
+
+## OpenClaw on Dedicated Raspberry Pi
+
+_We have not tested it yet, but it should be possible on the latest version 4 and 5._
+
+Most sources uses Raspberry Pi OS, but some uses Ubuntu.
