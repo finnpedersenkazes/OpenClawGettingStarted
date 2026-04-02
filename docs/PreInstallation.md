@@ -102,11 +102,16 @@ ollama run llama3.2:3b "respond with OK"
 
 ### OpenShell
 
-https://docs.nvidia.com/openshell/latest/index.html
+[docs.nvidia.com/openshell](https://docs.nvidia.com/openshell/latest/index.html)
+
+```bash
+curl -LsSf https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh | sh
+openshell sandbox create --from openclaw
+```
 
 ### Docker Desktop
 
-https://docs.docker.com/desktop/setup/install/linux/ubuntu/
+[Download Docker for Ubuntu](https://docs.docker.com/desktop/setup/install/linux/ubuntu/)
 
 ## Install OpenClaw
 
