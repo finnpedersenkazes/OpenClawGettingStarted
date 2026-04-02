@@ -64,7 +64,8 @@ nav:
       - Host: Host.md
       - AI Models: Models.md
       - Pre-installation: PreInstallation.md
-      - Installation: Installation.md
+      - Install OpenClaw: Installation.md
+      - Install NemoClaw: InstallationNemo.md
       - Onboarding: Onboarding.md
       - Skills: Skills.md
   - Configuration:
