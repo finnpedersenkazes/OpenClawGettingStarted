@@ -110,6 +110,14 @@ curl -LsSf https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh | 
 
 ### Docker Desktop
 
+Follow the instructions.
+
+#### Prerequisites
+
+```bash
+sudo apt install gnome-terminal
+```
+
 [Download Docker for Ubuntu](https://docs.docker.com/desktop/setup/install/linux/ubuntu/)
 
 ## Install OpenClaw
