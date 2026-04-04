@@ -534,17 +534,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#if-you-previously-installed-docker-desktop-on-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        If you previously installed Docker Desktop on Linux
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#openshell" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -988,17 +977,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#if-you-previously-installed-docker-desktop-on-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        If you previously installed Docker Desktop on Linux
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#openshell" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1060,7 +1038,7 @@
 
 <h2 id="before-installing-nvidia-nemoclaw">Before installing NVIDIA NemoClaw<a class="headerlink" href="#before-installing-nvidia-nemoclaw" title="Permanent link">&para;</a></h2>
 <p>The goal of this section is simple: make sure your computer is ready <strong>before</strong> you run the NemoClaw installer.</p>
-<p>For <strong>Ubuntu</strong>, use <strong>Docker Engine</strong>, not Docker Desktop. NVIDIA's current NemoClaw Quickstart lists <strong>Docker</strong> as the primary supported container runtime on Linux, while Docker Desktop is listed for macOS Apple Silicon and Windows WSL.</p>
+<p>For <strong>Ubuntu</strong>, install <strong>Docker Engine</strong> with Docker’s own <a href="https://get.docker.com/">install script</a>. NVIDIA’s NemoClaw Quickstart expects <strong>Docker</strong> on Linux.</p>
 <p>For first-time success on a fresh Ubuntu machine, make sure the following are in place before you continue:</p>
 <ul>
 <li><strong>Docker Engine</strong> installed and running</li>
@@ -1070,75 +1048,42 @@
 </ul>
 <p>NVIDIA also notes that NemoClaw is currently <strong>alpha software</strong>, so it is normal for the docs and runtime behavior to change quickly.</p>
 <h3 id="docker-engine-on-ubuntu">Docker Engine on Ubuntu<a class="headerlink" href="#docker-engine-on-ubuntu" title="Permanent link">&para;</a></h3>
-<p>Install Docker Engine using Docker's Ubuntu packages.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker-ce
+<p>Do these steps <strong>in this order</strong>. Skip nothing: the <code>docker</code> group step only works after a <strong>full log out and log back in</strong> (or reboot), and OpenShell expects Docker to work for your normal user account.</p>
+<ol>
+<li><strong>Install Docker</strong> with Docker’s <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script">Linux install script</a> from <a href="https://get.docker.com/">get.docker.com</a>. It adds Docker’s package source and installs the current Docker Engine for your Ubuntu version.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>sh
 </code></pre></div>
-<p>After installation, verify that the Docker service exists and is running:</p>
+<p><code>sudo</code> is required so the script can install packages. (You can <a href="https://github.com/docker/docker-install">read the script on GitHub</a> before you run it.)</p>
+<ol>
+<li><strong>Confirm the service is running</strong> (still fine to use <code>sudo</code> here):</li>
+</ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>docker<span class="w"> </span>--no-pager
 </code></pre></div>
-<p>Expected result:</p>
-<ul>
-<li><code>Loaded: loaded</code></li>
-<li><code>Active: active (running)</code></li>
-</ul>
-<p>Then add your user to the <code>docker</code> group so you can run Docker without <code>sudo</code>:</p>
+<p>You want <strong><code>Active: active (running)</code></strong>.</p>
+<ol>
+<li><strong>Let your user account use Docker without <code>sudo</code></strong> by adding it to the <code>docker</code> group. Run this once, right after Docker is installed:</li>
+</ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
 </code></pre></div>
-<p>After running that command, <strong>log out and back in</strong> before continuing. Docker's Linux post-install documentation notes that group membership changes may require a new login session before they take effect.</p>
-<p>When you are back in a fresh session, verify Docker:</p>
+<ol>
+<li>
+<p><strong>Log out of your desktop session and log back in</strong> (or restart the computer). Until you do, your current session <strong>does not</strong> see the new group, and <code>docker</code> will keep failing with permission errors when you are not root. Opening a new terminal is not always enough; a full session restart is the reliable fix.</p>
+</li>
+<li>
+<p><strong>In that new session</strong>, check Docker <strong>without</strong> <code>sudo</code>:</p>
+</li>
+</ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>version
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
 </code></pre></div>
-<p>Expected result:</p>
-<ul>
-<li>a <strong>Client</strong> section</li>
-<li>a <strong>Server</strong> section</li>
-<li>no permission error</li>
-</ul>
-<p>Then run a real container test:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
-</code></pre></div>
-<p>Expected result:</p>
-<ul>
-<li>Docker downloads the image if needed</li>
-<li>the output includes <code>Hello from Docker!</code></li>
-</ul>
-<h3 id="if-you-previously-installed-docker-desktop-on-linux">If you previously installed Docker Desktop on Linux<a class="headerlink" href="#if-you-previously-installed-docker-desktop-on-linux" title="Permanent link">&para;</a></h3>
-<p>If you already tried Docker Desktop on Ubuntu before switching to Docker Engine, remove Docker Desktop completely before continuing. Docker's uninstall documentation warns that Docker Desktop can leave configuration behind, including credential helper and context settings.</p>
-<p>Remove Docker Desktop:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>docker-desktop
-</code></pre></div>
-<p>After that, check for leftover Docker Desktop configuration in your shell files:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>grep<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;DOCKER_HOST\|desktop-linux\|docker/desktop/docker.sock&#39;</span><span class="w"> </span>~/.bashrc<span class="w"> </span>~/.profile<span class="w"> </span>~/.zshrc<span class="w"> </span><span class="m">2</span>&gt;/dev/null
-</code></pre></div>
-<p>If you find an old <code>DOCKER_HOST</code> export pointing to Docker Desktop, remove it.</p>
-<p>Also inspect Docker's client configuration:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>cat<span class="w"> </span>~/.docker/config.json
-</code></pre></div>
-<p>If you see this:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">{</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">&quot;auths&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="nt">&quot;credsStore&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;desktop&quot;</span><span class="p">,</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="nt">&quot;currentContext&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">}</span>
-</code></pre></div>
-<p>remove the <code>credsStore</code> entry, because it points to <code>docker-credential-desktop</code>, which is removed together with Docker Desktop. Docker documents that Docker Desktop uninstall on Linux may require manual cleanup of <code>credsStore</code> and <code>currentContext</code> in <code>~/.docker/config.json</code>.</p>
-<p>A minimal cleaned-up file can look like this:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">{</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">&quot;auths&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nt">&quot;currentContext&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">}</span>
-</code></pre></div>
-<p>After cleanup, verify again:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker<span class="w"> </span>version
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
-</code></pre></div>
+<p>You should see both <strong>Client</strong> and <strong>Server</strong> in <code>docker version</code>, and <code>hello-world</code> should print <code>Hello from Docker!</code> If you still get permission denied on the socket, repeat step 3 and step 4.</p>
 <h3 id="openshell">OpenShell<a class="headerlink" href="#openshell" title="Permanent link">&para;</a></h3>
-<p>Install OpenShell after Docker Engine is working:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+<p>Install OpenShell only <strong>after</strong> step 5 above works (Docker from a normal terminal, no <code>sudo</code>). The OpenShell installer expects a working <code>docker</code> command for your user.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
 </code></pre></div>
 <p>Verify that OpenShell is available:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>openshell<span class="w"> </span>--version
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>openshell<span class="w"> </span>--version
 </code></pre></div>
 <p>Expected result:</p>
 <ul>
@@ -1147,17 +1092,17 @@
 </ul>
 <h3 id="final-verification-before-installing-nemoclaw">Final verification before installing NemoClaw<a class="headerlink" href="#final-verification-before-installing-nemoclaw" title="Permanent link">&para;</a></h3>
 <p>Before moving to the NemoClaw installer, all of the following should work:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>docker<span class="w"> </span>version
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>openshell<span class="w"> </span>--version
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>node<span class="w"> </span>-v
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>npm<span class="w"> </span>-v
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>version
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>openshell<span class="w"> </span>--version
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>node<span class="w"> </span>-v
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>npm<span class="w"> </span>-v
 </code></pre></div>
 <p>If all five commands work, your Ubuntu machine is ready for the next step: installing NemoClaw.</p>
 <h3 id="note-about-nemoclaw-not-being-found-after-installation">Note about <code>nemoclaw</code> not being found after installation<a class="headerlink" href="#note-about-nemoclaw-not-being-found-after-installation" title="Permanent link">&para;</a></h3>
 <p>If you manage Node.js with <code>nvm</code> or <code>fnm</code>, NVIDIA notes that the installer may not update the current shell's <code>PATH</code> immediately. If <code>nemoclaw</code> is not found after installation, reload your shell configuration or open a new terminal:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>nemoclaw<span class="w"> </span>--help
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>nemoclaw<span class="w"> </span>--help
 </code></pre></div>
 <p>That is the easiest fix before assuming the installation failed.</p>
 

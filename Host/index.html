@@ -697,10 +697,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-to-avoid-on-ubuntu-for-the-first-run" class="md-nav__link">
+  <a href="#ubuntu-and-docker" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What to avoid on Ubuntu for the first run
+        Ubuntu and Docker
       
     </span>
   </a>
@@ -1509,10 +1509,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-to-avoid-on-ubuntu-for-the-first-run" class="md-nav__link">
+  <a href="#ubuntu-and-docker" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What to avoid on Ubuntu for the first run
+        Ubuntu and Docker
       
     </span>
   </a>
@@ -1671,7 +1671,7 @@
 <p>Most sources uses Raspberry Pi OS, but some uses Ubuntu.</p>
 <h2 id="choose-your-host">Choose your host<a class="headerlink" href="#choose-your-host" title="Permanent link">&para;</a></h2>
 <p>NVIDIA NemoClaw can run on several different kinds of hosts, but not all paths are equally mature.</p>
-<p>For a first successful installation, use a host that matches NVIDIA's documented runtime expectations and that you can manage comfortably. On Linux, that means using <strong>Docker Engine</strong> rather than Docker Desktop. NVIDIA's Quickstart lists <strong>Docker</strong> as the primary supported runtime on Linux. citeturn197817view1</p>
+<p>For a first successful installation, use a host that matches NVIDIA's documented runtime expectations and that you can manage comfortably. On Linux, use <strong>Docker Engine</strong> (for example, Docker’s official install script). NVIDIA's Quickstart lists <strong>Docker</strong> as the primary supported runtime on Linux.</p>
 <p>This page separates:</p>
 <ul>
 <li><strong>recommended and tested paths</strong></li>
@@ -1712,7 +1712,7 @@
 <li>reliable hardware</li>
 <li>good fit for a permanent home lab setup</li>
 </ul>
-<p>On macOS Apple Silicon, NVIDIA's Quickstart lists <strong>Docker Desktop</strong> as the supported runtime path. citeturn197817view1</p>
+<p>On macOS Apple Silicon, follow <strong>NVIDIA’s Quickstart</strong> for installing Docker on that platform.</p>
 <p>This can be a good choice if:</p>
 <ul>
 <li>you want a quiet machine running all the time</li>
@@ -1764,7 +1764,7 @@
 <p>Choose:</p>
 <ul>
 <li><strong>Mac mini</strong></li>
-<li><strong>Docker Desktop</strong></li>
+<li><strong>Docker</strong> (per NVIDIA’s Quickstart for macOS)</li>
 <li><strong>OpenShell</strong></li>
 <li><strong>NemoClaw</strong></li>
 </ul>
@@ -1773,20 +1773,14 @@
 <ul>
 <li><strong>NVIDIA Brev</strong></li>
 </ul>
-<h2 id="what-to-avoid-on-ubuntu-for-the-first-run">What to avoid on Ubuntu for the first run<a class="headerlink" href="#what-to-avoid-on-ubuntu-for-the-first-run" title="Permanent link">&para;</a></h2>
-<p>For Ubuntu, avoid Docker Desktop as the default recommendation.</p>
-<p>Docker Desktop on Linux can work in some situations, but it uses a different socket model than standard Docker Engine, and that can create avoidable onboarding problems for tools that expect the normal Linux Docker daemon. The simplest documentation path is therefore:</p>
-<ul>
-<li>Ubuntu -&gt; Docker Engine</li>
-<li>macOS Apple Silicon -&gt; Docker Desktop</li>
-</ul>
-<p>That matches NVIDIA's current Quickstart more closely and reduces first-run confusion. citeturn197817view1turn197817view2</p>
+<h2 id="ubuntu-and-docker">Ubuntu and Docker<a class="headerlink" href="#ubuntu-and-docker" title="Permanent link">&para;</a></h2>
+<p>On Ubuntu, install <strong>Docker Engine</strong> with Docker’s official Linux install script or repository. That matches NVIDIA’s Linux guidance and what this guide walks through.</p>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
 <p>If you want the smoothest first installation experience:</p>
 <ol>
 <li>use a dedicated Ubuntu machine or a Mac mini</li>
-<li>on Ubuntu, use Docker Engine</li>
-<li>on macOS Apple Silicon, use Docker Desktop</li>
+<li>on Ubuntu, use Docker Engine (install script or packages from Docker)</li>
+<li>on macOS Apple Silicon, install Docker as described in NVIDIA’s Quickstart</li>
 <li>use NVIDIA Brev when remote GPU access is the main goal</li>
 </ol>
 <p>Once you have chosen the host, continue to the <strong>Pre-installation</strong> page.</p>

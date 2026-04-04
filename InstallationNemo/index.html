@@ -693,10 +693,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker-credential-desktop-executable-file-not-found" class="md-nav__link">
+  <a href="#stale-docker-credential-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        docker-credential-desktop: executable file not found
+        Stale Docker credential configuration
       
     </span>
   </a>
@@ -1248,10 +1248,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker-credential-desktop-executable-file-not-found" class="md-nav__link">
+  <a href="#stale-docker-credential-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        docker-credential-desktop: executable file not found
+        Stale Docker credential configuration
       
     </span>
   </a>
@@ -1485,9 +1485,8 @@
 <p>Then log out and log back in before retrying:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>docker<span class="w"> </span>version
 </code></pre></div>
-<h3 id="docker-credential-desktop-executable-file-not-found"><code>docker-credential-desktop: executable file not found</code><a class="headerlink" href="#docker-credential-desktop-executable-file-not-found" title="Permanent link">&para;</a></h3>
-<p>This is usually a leftover from an earlier Docker Desktop installation.</p>
-<p>Inspect:</p>
+<h3 id="stale-docker-credential-configuration">Stale Docker credential configuration<a class="headerlink" href="#stale-docker-credential-configuration" title="Permanent link">&para;</a></h3>
+<p>If Docker fails with a missing <strong>credential helper</strong> (for example an error mentioning <code>docker-credential-*</code>), your <code>~/.docker/config.json</code> may point at a helper that is not installed. Inspect:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>cat<span class="w"> </span>~/.docker/config.json
 </code></pre></div>
 <p>If you see:</p>
@@ -1531,7 +1530,7 @@
 <a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>  [1/7] Preflight checks
 <a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>  ──────────────────────────────────────────────────
 <a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>  ✓ Docker is running
-<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>  ✓ Container runtime: docker-desktop
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>  ✓ Container runtime: docker
 <a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>  ✓ openshell CLI: openshell 0.0.20
 <a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>  ✓ Port 8080 available (OpenShell gateway)
 <a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a>  ✓ Port 18789 available (NemoClaw dashboard)
