@@ -100,28 +100,6 @@ ollama serve
 ollama run llama3.2:3b "respond with OK"
 ```
 
-## Before installing NVIDIA NemoClaw
-
-### OpenShell
-
-[docs.nvidia.com/openshell](https://docs.nvidia.com/openshell/latest/index.html)
-
-```bash
-curl -LsSf https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh | sh
-```
-
-### Docker Desktop
-
-Follow the instructions.
-
-#### Prerequisites
-
-```bash
-sudo apt install gnome-terminal
-```
-
-[Download Docker for Ubuntu](https://docs.docker.com/desktop/setup/install/linux/ubuntu/)
-
 ## Install OpenClaw
 
 [Next up: Install OpenClaw](Installation.md)

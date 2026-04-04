@@ -2,35 +2,16 @@
 
 The goal of this section is simple: make sure your computer is ready **before** you run the NemoClaw installer.
 
-For **Ubuntu**, use **Docker Engine**, not Docker Desktop. NVIDIA's current NemoClaw Quickstart lists **Docker** as the primary supported container runtime on Linux, while Docker Desktop is listed for macOS Apple Silicon and Windows WSL. citeturn197817view1turn197817view2
+For **Ubuntu**, use **Docker Engine**, not Docker Desktop. NVIDIA's current NemoClaw Quickstart lists **Docker** as the primary supported container runtime on Linux, while Docker Desktop is listed for macOS Apple Silicon and Windows WSL.
 
 For first-time success on a fresh Ubuntu machine, make sure the following are in place before you continue:
 
+- **Docker Engine** installed and running
+- **OpenShell** installed
 - **Node.js** 22.16 or later
 - **npm** 10 or later
-- **OpenShell** installed
-- **Docker Engine** installed and running
 
-NVIDIA also notes that NemoClaw is currently **alpha software**, so it is normal for the docs and runtime behavior to change quickly. citeturn197817view1
-
-### OpenShell
-
-Install OpenShell first:
-
-```bash
-curl -LsSf https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh | sh
-```
-
-Verify that OpenShell is available:
-
-```bash
-openshell --version
-```
-
-Expected result:
-
-- a version number is shown
-- no `command not found` error
+NVIDIA also notes that NemoClaw is currently **alpha software**, so it is normal for the docs and runtime behavior to change quickly.
 
 ### Docker Engine on Ubuntu
 
@@ -58,7 +39,7 @@ Then add your user to the `docker` group so you can run Docker without `sudo`:
 sudo usermod -aG docker $USER
 ```
 
-After running that command, **log out and back in** before continuing. Docker's Linux post-install documentation notes that group membership changes may require a new login session before they take effect. citeturn197817view3
+After running that command, **log out and back in** before continuing. Docker's Linux post-install documentation notes that group membership changes may require a new login session before they take effect.
 
 When you are back in a fresh session, verify Docker:
 
@@ -85,7 +66,7 @@ Expected result:
 
 ### If you previously installed Docker Desktop on Linux
 
-If you already tried Docker Desktop on Ubuntu before switching to Docker Engine, remove Docker Desktop completely before continuing. Docker's uninstall documentation warns that Docker Desktop can leave configuration behind, including credential helper and context settings. citeturn197817view4
+If you already tried Docker Desktop on Ubuntu before switching to Docker Engine, remove Docker Desktop completely before continuing. Docker's uninstall documentation warns that Docker Desktop can leave configuration behind, including credential helper and context settings.
 
 Remove Docker Desktop:
 
@@ -117,7 +98,7 @@ If you see this:
 }
 ```
 
-remove the `credsStore` entry, because it points to `docker-credential-desktop`, which is removed together with Docker Desktop. Docker documents that Docker Desktop uninstall on Linux may require manual cleanup of `credsStore` and `currentContext` in `~/.docker/config.json`. citeturn197817view4
+remove the `credsStore` entry, because it points to `docker-credential-desktop`, which is removed together with Docker Desktop. Docker documents that Docker Desktop uninstall on Linux may require manual cleanup of `credsStore` and `currentContext` in `~/.docker/config.json`.
 
 A minimal cleaned-up file can look like this:
 
@@ -135,19 +116,38 @@ docker version
 docker run hello-world
 ```
 
+### OpenShell
+
+Install OpenShell after Docker Engine is working:
+
+```bash
+curl -LsSf https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh | sh
+```
+
+Verify that OpenShell is available:
+
+```bash
+openshell --version
+```
+
+Expected result:
+
+- a version number is shown
+- no `command not found` error
+
 ### Final verification before installing NemoClaw
 
 Before moving to the NemoClaw installer, all of the following should work:
 
 ```bash
-node -v
-npm -v
-openshell --version
 docker version
 docker run hello-world
+openshell --version
+node -v
+npm -v
 ```
 
-If all five commands work, your Ubuntu machine is ready for the next step: installing NemoClaw. NVIDIA's Quickstart says the installer script installs NemoClaw and then runs the guided onboarding flow to create the first sandboxed OpenClaw agent. citeturn197817view1
+If all five commands work, your Ubuntu machine is ready for the next step: installing NemoClaw.
 
 ### Note about `nemoclaw` not being found after installation
 
@@ -158,4 +158,4 @@ source ~/.bashrc
 nemoclaw --help
 ```
 
-That is the easiest fix before assuming the installation failed. citeturn197817view1
+That is the easiest fix before assuming the installation failed.
