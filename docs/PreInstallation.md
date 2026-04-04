@@ -42,19 +42,9 @@ node -v # Should print "v24.14.0".
 npm -v # Should print "11.9.0".
 ```
 
-## Homebrew
-
-Many skill dependencies are shipped via Homebrew.
-
-### Ubuntu and macOS
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-After install, follow the on-screen instructions to add Homebrew to your PATH.
-
 ## Install Git
+
+You must install Git before Homebrew
 
 ### Ubuntu
 
@@ -76,6 +66,18 @@ Option 2 — via Homebrew (if you prefer Homebrew-managed Git):
 ```bash
 brew install git
 ```
+
+## Homebrew
+
+Many skill dependencies are shipped via Homebrew.
+
+### Ubuntu and macOS
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+After install, follow the on-screen instructions to add Homebrew to your PATH.
 
 ## Install Ollama
 

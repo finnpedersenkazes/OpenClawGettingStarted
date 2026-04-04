@@ -65,6 +65,7 @@ nav:
       - AI Models: Models.md
       - Pre-installation: PreInstallation.md
       - Install OpenClaw: Installation.md
+      - Before Installing NemoClaw: before-installing-nvidia-nemoclaw.md
       - Install NemoClaw: InstallationNemo.md
       - Onboarding: Onboarding.md
       - Skills: Skills.md

@@ -1,4 +1,328 @@
-# Install NemoClaw
+# Install NVIDIA NemoClaw
+
+This section assumes you already completed the pre-installation steps and verified that all of the following work:
+
+```bash
+node -v
+npm -v
+openshell --version
+docker version
+docker run hello-world
+```
+
+If any of those commands fail, go back to the pre-installation page first.
+
+## Install NemoClaw
+
+Run the official NVIDIA installer:
+
+```bash
+curl -fsSL https://www.nvidia.com/nemoclaw.sh | bash
+```
+
+Expected result:
+
+- Node.js is detected or installed
+- the NemoClaw CLI is installed
+- the command `nemoclaw --help` becomes available
+
+If you use `nvm` or `fnm` and `nemoclaw` is not found immediately after installation, reload your shell:
+
+```bash
+source ~/.bashrc
+nemoclaw --help
+```
+
+You should now see the NemoClaw command help.
+
+## Start onboarding
+
+When the installer has completed successfully, start the guided onboarding flow:
+
+```bash
+nemoclaw onboard
+```
+
+During onboarding, NemoClaw will typically do the following:
+
+1. run preflight checks
+2. start the OpenShell gateway
+3. ask you to choose an inference provider
+4. create your first sandboxed OpenClaw assistant
+5. show you how to connect to that sandbox
+
+On Ubuntu with Docker Engine, the preflight checks should report Docker as running and reachable.
+
+## What successful onboarding should look like
+
+The exact wording may change over time, but a successful onboarding run should look roughly like this:
+
+```text
+NemoClaw Onboarding
+===================
+
+[1/7] Preflight checks
+✓ Docker is running
+✓ Container runtime: docker
+✓ openshell CLI: openshell ...
+✓ Port 8080 available (OpenShell gateway)
+✓ Port 18789 available (NemoClaw dashboard)
+
+[2/7] Starting OpenShell gateway
+✓ Checking Docker
+✓ Downloading gateway
+✓ Initializing environment
+✓ Starting gateway
+✓ Gateway ready
+
+[3/7] Choose an inference provider
+...
+
+[4/7] Creating your first sandbox
+✓ Sandbox created
+
+[5/7] Final verification
+✓ Gateway healthy
+✓ Sandbox reachable
+```
+
+The exact model, provider, and prompts may differ depending on the current NemoClaw version.
+
+## Verify the gateway after onboarding
+
+When onboarding completes, verify that the gateway is healthy:
+
+```bash
+openshell status
+```
+
+Expected result:
+
+- `Status: Connected`
+
+Example:
+
+```text
+Server Status
+
+  Gateway: nemoclaw
+  Server: https://127.0.0.1:8080
+  Status: Connected
+  Version: ...
+```
+
+## List your sandboxes
+
+Check that your first sandbox exists:
+
+```bash
+nemoclaw list
+```
+
+Expected result:
+
+- at least one sandbox is listed
+- one of them is marked as the default sandbox
+
+Example:
+
+```text
+Sandboxes:
+  my-assistant *
+    model: claude-haiku-4-5  provider: anthropic-prod  CPU  policies: discord, docker, npm, pypi, telegram
+```
+
+`*` means the default sandbox.
+
+## Connect to your sandbox
+
+To open a shell inside your sandbox, run:
+
+```bash
+nemoclaw my-assistant connect
+```
+
+Replace `my-assistant` with the actual sandbox name shown by `nemoclaw list`.
+
+When connected, your prompt will look something like this:
+
+```bash
+sandbox@my-assistant:~$
+```
+
+This is no longer your Ubuntu host. You are now inside the sandbox.
+
+## Understand the difference between host and sandbox
+
+This distinction is important.
+
+### On the host
+
+Your prompt looks like this:
+
+```bash
+randall@your-computer:~$
+```
+
+This is your real Ubuntu machine.
+
+Use the host for commands such as:
+
+```bash
+docker version
+openshell status
+nemoclaw list
+nemoclaw onboard
+nemoclaw my-assistant status
+```
+
+### Inside the sandbox
+
+Your prompt looks like this:
+
+```bash
+sandbox@my-assistant:~$
+```
+
+This is the isolated assistant environment.
+
+Use the sandbox for commands such as:
+
+```bash
+openclaw --version
+openclaw update
+npm config set prefix ~/.local
+```
+
+Do not confuse the two environments when troubleshooting.
+
+## Optional: update OpenClaw inside the sandbox
+
+After connecting to the sandbox, you may want to update OpenClaw inside that sandbox.
+
+First configure npm to install global packages in a user-writable location:
+
+```bash
+npm config set prefix ~/.local
+export PATH="$HOME/.local/bin:$PATH"
+npm i -g openclaw@latest
+```
+
+Verify:
+
+```bash
+which openclaw
+openclaw --version
+```
+
+Expected result:
+
+- `which openclaw` points to a path under your home directory, such as `~/.local/bin/openclaw`
+- `openclaw --version` shows the installed version
+
+To make the path persistent in future sandbox shells:
+
+```bash
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+## Troubleshooting on Ubuntu
+
+### `nemoclaw: command not found`
+
+Reload your shell and try again:
+
+```bash
+source ~/.bashrc
+nemoclaw --help
+```
+
+### `permission denied while trying to connect to the docker API at unix:///var/run/docker.sock`
+
+Your user probably is not yet active in the `docker` group.
+
+Check:
+
+```bash
+groups
+```
+
+If `docker` is missing, add your user to the group on the host:
+
+```bash
+sudo usermod -aG docker $USER
+```
+
+Then log out and log back in before retrying:
+
+```bash
+docker version
+```
+
+### `docker-credential-desktop: executable file not found`
+
+This is usually a leftover from an earlier Docker Desktop installation.
+
+Inspect:
+
+```bash
+cat ~/.docker/config.json
+```
+
+If you see:
+
+```json
+{
+  "auths": {},
+  "credsStore": "desktop",
+  "currentContext": "default"
+}
+```
+
+remove the `credsStore` line, then retry:
+
+```bash
+docker run hello-world
+```
+
+### Sandbox listed locally but not present in the gateway
+
+If `nemoclaw ... status` says a sandbox is not present in the live OpenShell gateway, that usually means the local record is stale.
+
+In plain language, a stale record is just an old local entry for a sandbox that does not actually exist anymore.
+
+Check the live gateway first:
+
+```bash
+openshell status
+```
+
+Then list sandboxes again:
+
+```bash
+nemoclaw list
+```
+
+If necessary, rerun onboarding:
+
+```bash
+nemoclaw onboard
+```
+
+## When you are ready
+
+If all of the following work, your NemoClaw installation is successful:
+
+```bash
+openshell status
+nemoclaw list
+nemoclaw my-assistant connect
+```
+
+At that point, you are ready to configure providers, connect channels, and continue with the next steps in your OpenClaw setup.
+
+## Install NemoClaw
 
 [NemoClaw Quick Start](https://docs.nvidia.com/nemoclaw/latest/get-started/quickstart.html)
 
@@ -30,7 +354,7 @@ nemoclaw onboard
 ✓ Checking Docker
 ✓ Downloading gateway
 ✓ Initializing environment
-✓ Starting gateway                                                                                                                                         
+✓ Starting gateway
 ✓ Gateway ready
 
   Name: nemoclaw
@@ -55,7 +379,7 @@ Done. DNS should resolve in ~10 seconds.
     5) Other Anthropic-compatible endpoint
     6) Google Gemini
 
-  Choose [1]: 
+  Choose [1]:
 
   ┌─────────────────────────────────────────────────────────────────┐
   │  NVIDIA API Key required                                        │
@@ -79,7 +403,7 @@ Done. DNS should resolve in ~10 seconds.
     5) GPT-OSS 120B (openai/gpt-oss-120b)
     6) Other...
 
-  Choose model [1]: 
+  Choose model [1]:
   Responses API available — OpenClaw will use openai-responses.
   Using NVIDIA Endpoints with model: nvidia/nemotron-3-super-120b-a12b
 
@@ -97,6 +421,7 @@ Gateway inference configured:
   ✓ Inference route set: nvidia-prod / nvidia/nemotron-3-super-120b-a12b
 
 ```
+
 ```text
   [5/7] Creating sandbox
   ──────────────────────────────────────────────────
@@ -250,10 +575,10 @@ sandbox@nemoclaw-sandbox:~$ openclaw tui
 
 🦞 OpenClaw 2026.3.11 (29dc654) — I've read more man pages than any human should—so you don't have to.
 
- openclaw tui - ws://127.0.0.1:18789 - agent main - session main                                                                                           
- connecting | idle                                                                                                                                         
+ openclaw tui - ws://127.0.0.1:18789 - agent main - session main
+ connecting | idle
 
- Pairing required. Run `openclaw devices list`, approve your request ID, then reconnect.                                                                   
- gateway disconnected: pairing required | pairing required: run openclaw devices list                                                                      
+ Pairing required. Run `openclaw devices list`, approve your request ID, then reconnect.
+ gateway disconnected: pairing required | pairing required: run openclaw devices list
  agent main | session main | unknown | tokens ?
 ```
