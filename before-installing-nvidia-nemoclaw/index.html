@@ -1048,7 +1048,7 @@
 </ul>
 <p>NVIDIA also notes that NemoClaw is currently <strong>alpha software</strong>, so it is normal for the docs and runtime behavior to change quickly.</p>
 <h3 id="docker-engine-on-ubuntu">Docker Engine on Ubuntu<a class="headerlink" href="#docker-engine-on-ubuntu" title="Permanent link">&para;</a></h3>
-<p>Do these steps <strong>in this order</strong>. Skip nothing: the <code>docker</code> group step only works after a <strong>full log out and log back in</strong> (or reboot), and OpenShell expects Docker to work for your normal user account.</p>
+<p>Do these steps <strong>in this order</strong>. After <code>usermod</code>, you must get a <strong>new session</strong> (log out, reconnect, or reboot) before <code>groups</code> will show <code>docker</code> and before <code>docker</code> works without <code>sudo</code>. OpenShell expects Docker to work for your normal user account.</p>
 <ol>
 <li><strong>Install Docker</strong> with Docker’s <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script">Linux install script</a> from <a href="https://get.docker.com/">get.docker.com</a>. It adds Docker’s package source and installs the current Docker Engine for your Ubuntu version.</li>
 </ol>
@@ -1068,22 +1068,35 @@
 </code></pre></div>
 <ol>
 <li>
-<p><strong>Log out of your desktop session and log back in</strong> (or restart the computer). Until you do, your current session <strong>does not</strong> see the new group, and <code>docker</code> will keep failing with permission errors when you are not root. Opening a new terminal is not always enough; a full session restart is the reliable fix.</p>
+<p><strong>Start a new login session</strong> so your user picks up the <code>docker</code> group. The session where you ran <code>usermod</code> <strong>cannot</strong> use Docker without <code>sudo</code> until you do this.</p>
 </li>
 <li>
-<p><strong>In that new session</strong>, check Docker <strong>without</strong> <code>sudo</code>:</p>
+<p><strong>Physical PC or VM with a desktop:</strong> log out completely, then log back in. Or reboot: <code>sudo reboot</code>.</p>
 </li>
+<li><strong>SSH only:</strong> disconnect all SSH sessions, then connect again. If it still fails, reboot the machine: <code>sudo reboot</code>.</li>
+<li><strong>VM (VMware, etc.):</strong> rebooting the guest is often the simplest way to be sure everything is fresh.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>version
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+<p>Opening a <strong>new terminal tab</strong> in the same logged-in session is <strong>not</strong> enough on many systems.</p>
+<ol>
+<li><strong>In the new session</strong>, confirm the group before you run Docker:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>groups
 </code></pre></div>
-<p>You should see both <strong>Client</strong> and <strong>Server</strong> in <code>docker version</code>, and <code>hello-world</code> should print <code>Hello from Docker!</code> If you still get permission denied on the socket, repeat step 3 and step 4.</p>
+<p>The output should include <strong><code>docker</code></strong>. If it does not, you are still in an old session — repeat step 4 (log out / reconnect / reboot). Do not expect <code>docker</code> to work until <code>groups</code> shows <code>docker</code>.</p>
+<ol>
+<li><strong>Test Docker</strong> without <code>sudo</code>:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>version
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+</code></pre></div>
+<p>You should see both <strong>Client</strong> and <strong>Server</strong> in <code>docker version</code>, and <code>hello-world</code> should print <code>Hello from Docker!</code> If you still get permission denied on the socket, repeat steps 3–5.</p>
+<p>Optional quick check without rebooting (only if you cannot restart yet): <code>newgrp docker</code> in the current terminal, then try <code>docker run hello-world</code> again.</p>
 <h3 id="openshell">OpenShell<a class="headerlink" href="#openshell" title="Permanent link">&para;</a></h3>
-<p>Install OpenShell only <strong>after</strong> step 5 above works (Docker from a normal terminal, no <code>sudo</code>). The OpenShell installer expects a working <code>docker</code> command for your user.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+<p>Install OpenShell only <strong>after</strong> step 6 above works (Docker from a normal terminal, no <code>sudo</code>, and <code>groups</code> lists <code>docker</code>). The OpenShell installer expects a working <code>docker</code> command for your user.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
 </code></pre></div>
 <p>Verify that OpenShell is available:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>openshell<span class="w"> </span>--version
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>openshell<span class="w"> </span>--version
 </code></pre></div>
 <p>Expected result:</p>
 <ul>
@@ -1092,17 +1105,17 @@
 </ul>
 <h3 id="final-verification-before-installing-nemoclaw">Final verification before installing NemoClaw<a class="headerlink" href="#final-verification-before-installing-nemoclaw" title="Permanent link">&para;</a></h3>
 <p>Before moving to the NemoClaw installer, all of the following should work:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>version
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>openshell<span class="w"> </span>--version
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>node<span class="w"> </span>-v
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>npm<span class="w"> </span>-v
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>version
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>openshell<span class="w"> </span>--version
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>node<span class="w"> </span>-v
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>npm<span class="w"> </span>-v
 </code></pre></div>
 <p>If all five commands work, your Ubuntu machine is ready for the next step: installing NemoClaw.</p>
 <h3 id="note-about-nemoclaw-not-being-found-after-installation">Note about <code>nemoclaw</code> not being found after installation<a class="headerlink" href="#note-about-nemoclaw-not-being-found-after-installation" title="Permanent link">&para;</a></h3>
 <p>If you manage Node.js with <code>nvm</code> or <code>fnm</code>, NVIDIA notes that the installer may not update the current shell's <code>PATH</code> immediately. If <code>nemoclaw</code> is not found after installation, reload your shell configuration or open a new terminal:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>nemoclaw<span class="w"> </span>--help
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>nemoclaw<span class="w"> </span>--help
 </code></pre></div>
 <p>That is the easiest fix before assuming the installation failed.</p>
 
