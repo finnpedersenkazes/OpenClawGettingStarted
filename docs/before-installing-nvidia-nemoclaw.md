@@ -2,7 +2,7 @@
 
 The goal of this section is simple: make sure your computer is ready **before** you run the NemoClaw installer.
 
-For **Ubuntu**, use **Docker Engine**, not Docker Desktop. NVIDIA's current NemoClaw Quickstart lists **Docker** as the primary supported container runtime on Linux, while Docker Desktop is listed for macOS Apple Silicon and Windows WSL.
+For **Ubuntu**, install **Docker Engine** with Docker’s own [install script](https://get.docker.com/). NVIDIA’s NemoClaw Quickstart expects **Docker** on Linux.
 
 For first-time success on a fresh Ubuntu machine, make sure the following are in place before you continue:
 
@@ -15,110 +15,44 @@ NVIDIA also notes that NemoClaw is currently **alpha software**, so it is normal
 
 ### Docker Engine on Ubuntu
 
-Install Docker Engine using Docker's Ubuntu packages.
+Do these steps **in this order**. Skip nothing: the `docker` group step only works after a **full log out and log back in** (or reboot), and OpenShell expects Docker to work for your normal user account.
 
-```bash
-sudo apt update
-sudo apt install docker-ce
-```
+1. **Install Docker** with Docker’s [Linux install script](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script) from [get.docker.com](https://get.docker.com/). It adds Docker’s package source and installs the current Docker Engine for your Ubuntu version.
 
-After installation, verify that the Docker service exists and is running:
+   ```bash
+   curl -fsSL https://get.docker.com | sudo sh
+   ```
 
-```bash
-sudo systemctl status docker --no-pager
-```
+   `sudo` is required so the script can install packages. (You can [read the script on GitHub](https://github.com/docker/docker-install) before you run it.)
 
-Expected result:
+2. **Confirm the service is running** (still fine to use `sudo` here):
 
-- `Loaded: loaded`
-- `Active: active (running)`
+   ```bash
+   sudo systemctl status docker --no-pager
+   ```
 
-Then add your user to the `docker` group so you can run Docker without `sudo`:
+   You want **`Active: active (running)`**.
 
-```bash
-sudo usermod -aG docker $USER
-```
+3. **Let your user account use Docker without `sudo`** by adding it to the `docker` group. Run this once, right after Docker is installed:
 
-After running that command, **log out and back in** before continuing. Docker's Linux post-install documentation notes that group membership changes may require a new login session before they take effect.
+   ```bash
+   sudo usermod -aG docker $USER
+   ```
 
-When you are back in a fresh session, verify Docker:
+4. **Log out of your desktop session and log back in** (or restart the computer). Until you do, your current session **does not** see the new group, and `docker` will keep failing with permission errors when you are not root. Opening a new terminal is not always enough; a full session restart is the reliable fix.
 
-```bash
-docker version
-```
+5. **In that new session**, check Docker **without** `sudo`:
 
-Expected result:
+   ```bash
+   docker version
+   docker run hello-world
+   ```
 
-- a **Client** section
-- a **Server** section
-- no permission error
-
-Then run a real container test:
-
-```bash
-docker run hello-world
-```
-
-Expected result:
-
-- Docker downloads the image if needed
-- the output includes `Hello from Docker!`
-
-### If you previously installed Docker Desktop on Linux
-
-If you already tried Docker Desktop on Ubuntu before switching to Docker Engine, remove Docker Desktop completely before continuing. Docker's uninstall documentation warns that Docker Desktop can leave configuration behind, including credential helper and context settings.
-
-Remove Docker Desktop:
-
-```bash
-sudo apt remove docker-desktop
-```
-
-After that, check for leftover Docker Desktop configuration in your shell files:
-
-```bash
-grep -n 'DOCKER_HOST\|desktop-linux\|docker/desktop/docker.sock' ~/.bashrc ~/.profile ~/.zshrc 2>/dev/null
-```
-
-If you find an old `DOCKER_HOST` export pointing to Docker Desktop, remove it.
-
-Also inspect Docker's client configuration:
-
-```bash
-cat ~/.docker/config.json
-```
-
-If you see this:
-
-```json
-{
-  "auths": {},
-  "credsStore": "desktop",
-  "currentContext": "default"
-}
-```
-
-remove the `credsStore` entry, because it points to `docker-credential-desktop`, which is removed together with Docker Desktop. Docker documents that Docker Desktop uninstall on Linux may require manual cleanup of `credsStore` and `currentContext` in `~/.docker/config.json`.
-
-A minimal cleaned-up file can look like this:
-
-```json
-{
-  "auths": {},
-  "currentContext": "default"
-}
-```
-
-After cleanup, verify again:
-
-```bash
-docker version
-docker run hello-world
-```
+   You should see both **Client** and **Server** in `docker version`, and `hello-world` should print `Hello from Docker!` If you still get permission denied on the socket, repeat step 3 and step 4.
 
 ### OpenShell
 
-Install OpenShell after Docker Engine is working:
+Install OpenShell only **after** step 5 above works (Docker from a normal terminal, no `sudo`). The OpenShell installer expects a working `docker` command for your user.
 
 ```bash
 curl -LsSf https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh | sh

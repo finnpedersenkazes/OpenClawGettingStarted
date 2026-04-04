@@ -89,7 +89,7 @@ Most sources uses Raspberry Pi OS, but some uses Ubuntu.
 
 NVIDIA NemoClaw can run on several different kinds of hosts, but not all paths are equally mature.
 
-For a first successful installation, use a host that matches NVIDIA's documented runtime expectations and that you can manage comfortably. On Linux, that means using **Docker Engine** rather than Docker Desktop. NVIDIA's Quickstart lists **Docker** as the primary supported runtime on Linux. citeturn197817view1
+For a first successful installation, use a host that matches NVIDIA's documented runtime expectations and that you can manage comfortably. On Linux, use **Docker Engine** (for example, Docker’s official install script). NVIDIA's Quickstart lists **Docker** as the primary supported runtime on Linux.
 
 This page separates:
 
@@ -141,7 +141,7 @@ Typical advantages:
 - reliable hardware
 - good fit for a permanent home lab setup
 
-On macOS Apple Silicon, NVIDIA's Quickstart lists **Docker Desktop** as the supported runtime path. citeturn197817view1
+On macOS Apple Silicon, follow **NVIDIA’s Quickstart** for installing Docker on that platform.
 
 This can be a good choice if:
 
@@ -210,7 +210,7 @@ Choose:
 Choose:
 
 - **Mac mini**
-- **Docker Desktop**
+- **Docker** (per NVIDIA’s Quickstart for macOS)
 - **OpenShell**
 - **NemoClaw**
 
@@ -220,24 +220,17 @@ Choose:
 
 - **NVIDIA Brev**
 
-## What to avoid on Ubuntu for the first run
+## Ubuntu and Docker
 
-For Ubuntu, avoid Docker Desktop as the default recommendation.
-
-Docker Desktop on Linux can work in some situations, but it uses a different socket model than standard Docker Engine, and that can create avoidable onboarding problems for tools that expect the normal Linux Docker daemon. The simplest documentation path is therefore:
-
-- Ubuntu -> Docker Engine
-- macOS Apple Silicon -> Docker Desktop
-
-That matches NVIDIA's current Quickstart more closely and reduces first-run confusion. citeturn197817view1turn197817view2
+On Ubuntu, install **Docker Engine** with Docker’s official Linux install script or repository. That matches NVIDIA’s Linux guidance and what this guide walks through.
 
 ## Summary
 
 If you want the smoothest first installation experience:
 
 1. use a dedicated Ubuntu machine or a Mac mini
-2. on Ubuntu, use Docker Engine
-3. on macOS Apple Silicon, use Docker Desktop
+2. on Ubuntu, use Docker Engine (install script or packages from Docker)
+3. on macOS Apple Silicon, install Docker as described in NVIDIA’s Quickstart
 4. use NVIDIA Brev when remote GPU access is the main goal
 
 Once you have chosen the host, continue to the **Pre-installation** page.

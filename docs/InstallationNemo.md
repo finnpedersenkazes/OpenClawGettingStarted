@@ -260,11 +260,9 @@ Then log out and log back in before retrying:
 docker version
 ```
 
-### `docker-credential-desktop: executable file not found`
+### Stale Docker credential configuration
 
-This is usually a leftover from an earlier Docker Desktop installation.
-
-Inspect:
+If Docker fails with a missing **credential helper** (for example an error mentioning `docker-credential-*`), your `~/.docker/config.json` may point at a helper that is not installed. Inspect:
 
 ```bash
 cat ~/.docker/config.json
@@ -341,7 +339,7 @@ nemoclaw onboard
   [1/7] Preflight checks
   ──────────────────────────────────────────────────
   ✓ Docker is running
-  ✓ Container runtime: docker-desktop
+  ✓ Container runtime: docker
   ✓ openshell CLI: openshell 0.0.20
   ✓ Port 8080 available (OpenShell gateway)
   ✓ Port 18789 available (NemoClaw dashboard)
