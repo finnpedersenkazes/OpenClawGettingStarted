@@ -15,7 +15,7 @@ NVIDIA also notes that NemoClaw is currently **alpha software**, so it is normal
 
 ### Docker Engine on Ubuntu
 
-Do these steps **in this order**. Skip nothing: the `docker` group step only works after a **full log out and log back in** (or reboot), and OpenShell expects Docker to work for your normal user account.
+Do these steps **in this order**. After `usermod`, you must get a **new session** (log out, reconnect, or reboot) before `groups` will show `docker` and before `docker` works without `sudo`. OpenShell expects Docker to work for your normal user account.
 
 1. **Install Docker** with Docker’s [Linux install script](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script) from [get.docker.com](https://get.docker.com/). It adds Docker’s package source and installs the current Docker Engine for your Ubuntu version.
 
@@ -39,20 +39,36 @@ Do these steps **in this order**. Skip nothing: the `docker` group step only wor
    sudo usermod -aG docker $USER
    ```
 
-4. **Log out of your desktop session and log back in** (or restart the computer). Until you do, your current session **does not** see the new group, and `docker` will keep failing with permission errors when you are not root. Opening a new terminal is not always enough; a full session restart is the reliable fix.
+4. **Start a new login session** so your user picks up the `docker` group. The session where you ran `usermod` **cannot** use Docker without `sudo` until you do this.
 
-5. **In that new session**, check Docker **without** `sudo`:
+   - **Physical PC or VM with a desktop:** log out completely, then log back in. Or reboot: `sudo reboot`.
+   - **SSH only:** disconnect all SSH sessions, then connect again. If it still fails, reboot the machine: `sudo reboot`.
+   - **VM (VMware, etc.):** rebooting the guest is often the simplest way to be sure everything is fresh.
+
+   Opening a **new terminal tab** in the same logged-in session is **not** enough on many systems.
+
+5. **In the new session**, confirm the group before you run Docker:
+
+   ```bash
+   groups
+   ```
+
+   The output should include **`docker`**. If it does not, you are still in an old session — repeat step 4 (log out / reconnect / reboot). Do not expect `docker` to work until `groups` shows `docker`.
+
+6. **Test Docker** without `sudo`:
 
    ```bash
    docker version
    docker run hello-world
    ```
 
-   You should see both **Client** and **Server** in `docker version`, and `hello-world` should print `Hello from Docker!` If you still get permission denied on the socket, repeat step 3 and step 4.
+   You should see both **Client** and **Server** in `docker version`, and `hello-world` should print `Hello from Docker!` If you still get permission denied on the socket, repeat steps 3–5.
+
+   Optional quick check without rebooting (only if you cannot restart yet): `newgrp docker` in the current terminal, then try `docker run hello-world` again.
 
 ### OpenShell
 
-Install OpenShell only **after** step 5 above works (Docker from a normal terminal, no `sudo`). The OpenShell installer expects a working `docker` command for your user.
+Install OpenShell only **after** step 6 above works (Docker from a normal terminal, no `sudo`, and `groups` lists `docker`). The OpenShell installer expects a working `docker` command for your user.
 
 ```bash
 curl -LsSf https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh | sh
