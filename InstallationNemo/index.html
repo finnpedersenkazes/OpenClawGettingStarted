@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://www.finnpedersenfrance.com/OpenClawGettingStarted/InstallationNemo/">
       
       
-        <link rel="prev" href="../Installation/">
+        <link rel="prev" href="../before-installing-nvidia-nemoclaw/">
       
       
         <link rel="next" href="../Onboarding/">
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#install-nemoclaw" class="md-skip">
+        <a href="#install-nvidia-nemoclaw" class="md-skip">
           Skip to content
         </a>
       
@@ -452,6 +452,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../before-installing-nvidia-nemoclaw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Before Installing NemoClaw
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -463,6 +491,24 @@
       
         
       
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install NemoClaw
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -480,6 +526,224 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-nemoclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install NemoClaw
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start onboarding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-successful-onboarding-should-look-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What successful onboarding should look like
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-the-gateway-after-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify the gateway after onboarding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-your-sandboxes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List your sandboxes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-your-sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect to your sandbox
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understand-the-difference-between-host-and-sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand the difference between host and sandbox
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understand the difference between host and sandbox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-the-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        On the host
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inside-the-sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inside the sandbox
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-update-openclaw-inside-the-sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional: update OpenClaw inside the sandbox
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-on-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting on Ubuntu
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting on Ubuntu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nemoclaw-command-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nemoclaw: command not found
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-denied-while-trying-to-connect-to-the-docker-api-at-unixvarrundockersock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-credential-desktop-executable-file-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        docker-credential-desktop: executable file not found
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sandbox-listed-locally-but-not-present-in-the-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sandbox listed locally but not present in the gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-you-are-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When you are ready
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-nemoclaw_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install NemoClaw
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -827,6 +1091,213 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-nemoclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install NemoClaw
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start onboarding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-successful-onboarding-should-look-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What successful onboarding should look like
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-the-gateway-after-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify the gateway after onboarding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-your-sandboxes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List your sandboxes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-your-sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect to your sandbox
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understand-the-difference-between-host-and-sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand the difference between host and sandbox
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understand the difference between host and sandbox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-the-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        On the host
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inside-the-sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inside the sandbox
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-update-openclaw-inside-the-sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional: update OpenClaw inside the sandbox
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-on-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting on Ubuntu
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting on Ubuntu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nemoclaw-command-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nemoclaw: command not found
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-denied-while-trying-to-connect-to-the-docker-api-at-unixvarrundockersock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-credential-desktop-executable-file-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        docker-credential-desktop: executable file not found
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sandbox-listed-locally-but-not-present-in-the-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sandbox listed locally but not present in the gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-you-are-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When you are ready
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-nemoclaw_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install NemoClaw
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -845,9 +1316,454 @@
   
 
 
-<h1 id="install-nemoclaw">Install NemoClaw<a class="headerlink" href="#install-nemoclaw" title="Permanent link">&para;</a></h1>
+<h1 id="install-nvidia-nemoclaw">Install NVIDIA NemoClaw<a class="headerlink" href="#install-nvidia-nemoclaw" title="Permanent link">&para;</a></h1>
+<p>This section assumes you already completed the pre-installation steps and verified that all of the following work:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>node<span class="w"> </span>-v
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>npm<span class="w"> </span>-v
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>openshell<span class="w"> </span>--version
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>docker<span class="w"> </span>version
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+</code></pre></div>
+<p>If any of those commands fail, go back to the pre-installation page first.</p>
+<h2 id="install-nemoclaw">Install NemoClaw<a class="headerlink" href="#install-nemoclaw" title="Permanent link">&para;</a></h2>
+<p>Run the official NVIDIA installer:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://www.nvidia.com/nemoclaw.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+</code></pre></div>
+<p>Expected result:</p>
+<ul>
+<li>Node.js is detected or installed</li>
+<li>the NemoClaw CLI is installed</li>
+<li>the command <code>nemoclaw --help</code> becomes available</li>
+</ul>
+<p>If you use <code>nvm</code> or <code>fnm</code> and <code>nemoclaw</code> is not found immediately after installation, reload your shell:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>nemoclaw<span class="w"> </span>--help
+</code></pre></div>
+<p>You should now see the NemoClaw command help.</p>
+<h2 id="start-onboarding">Start onboarding<a class="headerlink" href="#start-onboarding" title="Permanent link">&para;</a></h2>
+<p>When the installer has completed successfully, start the guided onboarding flow:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>nemoclaw<span class="w"> </span>onboard
+</code></pre></div>
+<p>During onboarding, NemoClaw will typically do the following:</p>
+<ol>
+<li>run preflight checks</li>
+<li>start the OpenShell gateway</li>
+<li>ask you to choose an inference provider</li>
+<li>create your first sandboxed OpenClaw assistant</li>
+<li>show you how to connect to that sandbox</li>
+</ol>
+<p>On Ubuntu with Docker Engine, the preflight checks should report Docker as running and reachable.</p>
+<h2 id="what-successful-onboarding-should-look-like">What successful onboarding should look like<a class="headerlink" href="#what-successful-onboarding-should-look-like" title="Permanent link">&para;</a></h2>
+<p>The exact wording may change over time, but a successful onboarding run should look roughly like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>NemoClaw Onboarding
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>===================
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>[1/7] Preflight checks
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>✓ Docker is running
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>✓ Container runtime: docker
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>✓ openshell CLI: openshell ...
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>✓ Port 8080 available (OpenShell gateway)
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>✓ Port 18789 available (NemoClaw dashboard)
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>[2/7] Starting OpenShell gateway
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>✓ Checking Docker
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>✓ Downloading gateway
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>✓ Initializing environment
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>✓ Starting gateway
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>✓ Gateway ready
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>[3/7] Choose an inference provider
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>...
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>[4/7] Creating your first sandbox
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>✓ Sandbox created
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>[5/7] Final verification
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>✓ Gateway healthy
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>✓ Sandbox reachable
+</code></pre></div>
+<p>The exact model, provider, and prompts may differ depending on the current NemoClaw version.</p>
+<h2 id="verify-the-gateway-after-onboarding">Verify the gateway after onboarding<a class="headerlink" href="#verify-the-gateway-after-onboarding" title="Permanent link">&para;</a></h2>
+<p>When onboarding completes, verify that the gateway is healthy:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>openshell<span class="w"> </span>status
+</code></pre></div>
+<p>Expected result:</p>
+<ul>
+<li><code>Status: Connected</code></li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Server Status
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>  Gateway: nemoclaw
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  Server: https://127.0.0.1:8080
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>  Status: Connected
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>  Version: ...
+</code></pre></div>
+<h2 id="list-your-sandboxes">List your sandboxes<a class="headerlink" href="#list-your-sandboxes" title="Permanent link">&para;</a></h2>
+<p>Check that your first sandbox exists:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>nemoclaw<span class="w"> </span>list
+</code></pre></div>
+<p>Expected result:</p>
+<ul>
+<li>at least one sandbox is listed</li>
+<li>one of them is marked as the default sandbox</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Sandboxes:
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  my-assistant *
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    model: claude-haiku-4-5  provider: anthropic-prod  CPU  policies: discord, docker, npm, pypi, telegram
+</code></pre></div>
+<p><code>*</code> means the default sandbox.</p>
+<h2 id="connect-to-your-sandbox">Connect to your sandbox<a class="headerlink" href="#connect-to-your-sandbox" title="Permanent link">&para;</a></h2>
+<p>To open a shell inside your sandbox, run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>nemoclaw<span class="w"> </span>my-assistant<span class="w"> </span>connect
+</code></pre></div>
+<p>Replace <code>my-assistant</code> with the actual sandbox name shown by <code>nemoclaw list</code>.</p>
+<p>When connected, your prompt will look something like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sandbox@my-assistant:~$
+</code></pre></div>
+<p>This is no longer your Ubuntu host. You are now inside the sandbox.</p>
+<h2 id="understand-the-difference-between-host-and-sandbox">Understand the difference between host and sandbox<a class="headerlink" href="#understand-the-difference-between-host-and-sandbox" title="Permanent link">&para;</a></h2>
+<p>This distinction is important.</p>
+<h3 id="on-the-host">On the host<a class="headerlink" href="#on-the-host" title="Permanent link">&para;</a></h3>
+<p>Your prompt looks like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>randall@your-computer:~$
+</code></pre></div>
+<p>This is your real Ubuntu machine.</p>
+<p>Use the host for commands such as:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker<span class="w"> </span>version
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>openshell<span class="w"> </span>status
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>nemoclaw<span class="w"> </span>list
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>nemoclaw<span class="w"> </span>onboard
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>nemoclaw<span class="w"> </span>my-assistant<span class="w"> </span>status
+</code></pre></div>
+<h3 id="inside-the-sandbox">Inside the sandbox<a class="headerlink" href="#inside-the-sandbox" title="Permanent link">&para;</a></h3>
+<p>Your prompt looks like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>sandbox@my-assistant:~$
+</code></pre></div>
+<p>This is the isolated assistant environment.</p>
+<p>Use the sandbox for commands such as:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>openclaw<span class="w"> </span>--version
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>openclaw<span class="w"> </span>update
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>npm<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>prefix<span class="w"> </span>~/.local
+</code></pre></div>
+<p>Do not confuse the two environments when troubleshooting.</p>
+<h2 id="optional-update-openclaw-inside-the-sandbox">Optional: update OpenClaw inside the sandbox<a class="headerlink" href="#optional-update-openclaw-inside-the-sandbox" title="Permanent link">&para;</a></h2>
+<p>After connecting to the sandbox, you may want to update OpenClaw inside that sandbox.</p>
+<p>First configure npm to install global packages in a user-writable location:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>npm<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>prefix<span class="w"> </span>~/.local
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>npm<span class="w"> </span>i<span class="w"> </span>-g<span class="w"> </span>openclaw@latest
+</code></pre></div>
+<p>Verify:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>which<span class="w"> </span>openclaw
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>openclaw<span class="w"> </span>--version
+</code></pre></div>
+<p>Expected result:</p>
+<ul>
+<li><code>which openclaw</code> points to a path under your home directory, such as <code>~/.local/bin/openclaw</code></li>
+<li><code>openclaw --version</code> shows the installed version</li>
+</ul>
+<p>To make the path persistent in future sandbox shells:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;$HOME/.local/bin:$PATH&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+<h2 id="troubleshooting-on-ubuntu">Troubleshooting on Ubuntu<a class="headerlink" href="#troubleshooting-on-ubuntu" title="Permanent link">&para;</a></h2>
+<h3 id="nemoclaw-command-not-found"><code>nemoclaw: command not found</code><a class="headerlink" href="#nemoclaw-command-not-found" title="Permanent link">&para;</a></h3>
+<p>Reload your shell and try again:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>nemoclaw<span class="w"> </span>--help
+</code></pre></div>
+<h3 id="permission-denied-while-trying-to-connect-to-the-docker-api-at-unixvarrundockersock"><code>permission denied while trying to connect to the docker API at unix:///var/run/docker.sock</code><a class="headerlink" href="#permission-denied-while-trying-to-connect-to-the-docker-api-at-unixvarrundockersock" title="Permanent link">&para;</a></h3>
+<p>Your user probably is not yet active in the <code>docker</code> group.</p>
+<p>Check:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>groups
+</code></pre></div>
+<p>If <code>docker</code> is missing, add your user to the group on the host:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
+</code></pre></div>
+<p>Then log out and log back in before retrying:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>docker<span class="w"> </span>version
+</code></pre></div>
+<h3 id="docker-credential-desktop-executable-file-not-found"><code>docker-credential-desktop: executable file not found</code><a class="headerlink" href="#docker-credential-desktop-executable-file-not-found" title="Permanent link">&para;</a></h3>
+<p>This is usually a leftover from an earlier Docker Desktop installation.</p>
+<p>Inspect:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>cat<span class="w"> </span>~/.docker/config.json
+</code></pre></div>
+<p>If you see:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">{</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span><span class="nt">&quot;auths&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">  </span><span class="nt">&quot;credsStore&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;desktop&quot;</span><span class="p">,</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">  </span><span class="nt">&quot;currentContext&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="p">}</span>
+</code></pre></div>
+<p>remove the <code>credsStore</code> line, then retry:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+</code></pre></div>
+<h3 id="sandbox-listed-locally-but-not-present-in-the-gateway">Sandbox listed locally but not present in the gateway<a class="headerlink" href="#sandbox-listed-locally-but-not-present-in-the-gateway" title="Permanent link">&para;</a></h3>
+<p>If <code>nemoclaw ... status</code> says a sandbox is not present in the live OpenShell gateway, that usually means the local record is stale.</p>
+<p>In plain language, a stale record is just an old local entry for a sandbox that does not actually exist anymore.</p>
+<p>Check the live gateway first:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>openshell<span class="w"> </span>status
+</code></pre></div>
+<p>Then list sandboxes again:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>nemoclaw<span class="w"> </span>list
+</code></pre></div>
+<p>If necessary, rerun onboarding:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>nemoclaw<span class="w"> </span>onboard
+</code></pre></div>
+<h2 id="when-you-are-ready">When you are ready<a class="headerlink" href="#when-you-are-ready" title="Permanent link">&para;</a></h2>
+<p>If all of the following work, your NemoClaw installation is successful:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>openshell<span class="w"> </span>status
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>nemoclaw<span class="w"> </span>list
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>nemoclaw<span class="w"> </span>my-assistant<span class="w"> </span>connect
+</code></pre></div>
+<p>At that point, you are ready to configure providers, connect channels, and continue with the next steps in your OpenClaw setup.</p>
+<h2 id="install-nemoclaw_1">Install NemoClaw<a class="headerlink" href="#install-nemoclaw_1" title="Permanent link">&para;</a></h2>
 <p><a href="https://docs.nvidia.com/nemoclaw/latest/get-started/quickstart.html">NemoClaw Quick Start</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://www.nvidia.com/nemoclaw.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://www.nvidia.com/nemoclaw.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>nemoclaw<span class="w"> </span>onboard
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>  NemoClaw Onboarding
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>  ===================
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>  [1/7] Preflight checks
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>  ──────────────────────────────────────────────────
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>  ✓ Docker is running
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>  ✓ Container runtime: docker-desktop
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>  ✓ openshell CLI: openshell 0.0.20
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>  ✓ Port 8080 available (OpenShell gateway)
+<a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a>  ✓ Port 18789 available (NemoClaw dashboard)
+<a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>  ⓘ No GPU detected — will use cloud inference
+<a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a>  ✓ Memory OK: 14225 MB RAM + 4095 MB swap
+<a id="__codelineno-31-13" name="__codelineno-31-13" href="#__codelineno-31-13"></a>
+<a id="__codelineno-31-14" name="__codelineno-31-14" href="#__codelineno-31-14"></a>  [2/7] Starting OpenShell gateway
+<a id="__codelineno-31-15" name="__codelineno-31-15" href="#__codelineno-31-15"></a>  ──────────────────────────────────────────────────
+<a id="__codelineno-31-16" name="__codelineno-31-16" href="#__codelineno-31-16"></a>  Using pinned OpenShell gateway image: ghcr.io/nvidia/openshell/cluster:0.0.20
+<a id="__codelineno-31-17" name="__codelineno-31-17" href="#__codelineno-31-17"></a>✓ Checking Docker
+<a id="__codelineno-31-18" name="__codelineno-31-18" href="#__codelineno-31-18"></a>✓ Downloading gateway
+<a id="__codelineno-31-19" name="__codelineno-31-19" href="#__codelineno-31-19"></a>✓ Initializing environment
+<a id="__codelineno-31-20" name="__codelineno-31-20" href="#__codelineno-31-20"></a>✓ Starting gateway
+<a id="__codelineno-31-21" name="__codelineno-31-21" href="#__codelineno-31-21"></a>✓ Gateway ready
+<a id="__codelineno-31-22" name="__codelineno-31-22" href="#__codelineno-31-22"></a>
+<a id="__codelineno-31-23" name="__codelineno-31-23" href="#__codelineno-31-23"></a>  Name: nemoclaw
+<a id="__codelineno-31-24" name="__codelineno-31-24" href="#__codelineno-31-24"></a>  Endpoint: https://127.0.0.1:8080
+<a id="__codelineno-31-25" name="__codelineno-31-25" href="#__codelineno-31-25"></a>
+<a id="__codelineno-31-26" name="__codelineno-31-26" href="#__codelineno-31-26"></a>✓ Active gateway set to &#39;nemoclaw&#39;
+<a id="__codelineno-31-27" name="__codelineno-31-27" href="#__codelineno-31-27"></a>  ✓ Gateway is healthy
+<a id="__codelineno-31-28" name="__codelineno-31-28" href="#__codelineno-31-28"></a>  Patching CoreDNS DNS forwarding...
+<a id="__codelineno-31-29" name="__codelineno-31-29" href="#__codelineno-31-29"></a>Patching CoreDNS to forward to 192.168.1.254...
+<a id="__codelineno-31-30" name="__codelineno-31-30" href="#__codelineno-31-30"></a>CoreDNS patched. Waiting for rollout...
+<a id="__codelineno-31-31" name="__codelineno-31-31" href="#__codelineno-31-31"></a>Done. DNS should resolve in ~10 seconds.
+<a id="__codelineno-31-32" name="__codelineno-31-32" href="#__codelineno-31-32"></a>✓ Active gateway set to &#39;nemoclaw&#39;
+<a id="__codelineno-31-33" name="__codelineno-31-33" href="#__codelineno-31-33"></a>
+<a id="__codelineno-31-34" name="__codelineno-31-34" href="#__codelineno-31-34"></a>  [3/7] Configuring inference (NIM)
+<a id="__codelineno-31-35" name="__codelineno-31-35" href="#__codelineno-31-35"></a>  ──────────────────────────────────────────────────
+<a id="__codelineno-31-36" name="__codelineno-31-36" href="#__codelineno-31-36"></a>
+<a id="__codelineno-31-37" name="__codelineno-31-37" href="#__codelineno-31-37"></a>  Inference options:
+<a id="__codelineno-31-38" name="__codelineno-31-38" href="#__codelineno-31-38"></a>    1) NVIDIA Endpoints
+<a id="__codelineno-31-39" name="__codelineno-31-39" href="#__codelineno-31-39"></a>    2) OpenAI
+<a id="__codelineno-31-40" name="__codelineno-31-40" href="#__codelineno-31-40"></a>    3) Other OpenAI-compatible endpoint
+<a id="__codelineno-31-41" name="__codelineno-31-41" href="#__codelineno-31-41"></a>    4) Anthropic
+<a id="__codelineno-31-42" name="__codelineno-31-42" href="#__codelineno-31-42"></a>    5) Other Anthropic-compatible endpoint
+<a id="__codelineno-31-43" name="__codelineno-31-43" href="#__codelineno-31-43"></a>    6) Google Gemini
+<a id="__codelineno-31-44" name="__codelineno-31-44" href="#__codelineno-31-44"></a>
+<a id="__codelineno-31-45" name="__codelineno-31-45" href="#__codelineno-31-45"></a>  Choose [1]:
+<a id="__codelineno-31-46" name="__codelineno-31-46" href="#__codelineno-31-46"></a>
+<a id="__codelineno-31-47" name="__codelineno-31-47" href="#__codelineno-31-47"></a>  ┌─────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-31-48" name="__codelineno-31-48" href="#__codelineno-31-48"></a>  │  NVIDIA API Key required                                        │
+<a id="__codelineno-31-49" name="__codelineno-31-49" href="#__codelineno-31-49"></a>  │                                                                 │
+<a id="__codelineno-31-50" name="__codelineno-31-50" href="#__codelineno-31-50"></a>  │  1. Go to https://build.nvidia.com/settings/api-keys            │
+<a id="__codelineno-31-51" name="__codelineno-31-51" href="#__codelineno-31-51"></a>  │  2. Sign in with your NVIDIA account                            │
+<a id="__codelineno-31-52" name="__codelineno-31-52" href="#__codelineno-31-52"></a>  │  3. Click &#39;Generate API Key&#39; button                             │
+<a id="__codelineno-31-53" name="__codelineno-31-53" href="#__codelineno-31-53"></a>  │  4. Paste the key below (starts with nvapi-)                    │
+<a id="__codelineno-31-54" name="__codelineno-31-54" href="#__codelineno-31-54"></a>  └─────────────────────────────────────────────────────────────────┘
+<a id="__codelineno-31-55" name="__codelineno-31-55" href="#__codelineno-31-55"></a>
+<a id="__codelineno-31-56" name="__codelineno-31-56" href="#__codelineno-31-56"></a>  NVIDIA API Key: **********************************************************************
+<a id="__codelineno-31-57" name="__codelineno-31-57" href="#__codelineno-31-57"></a>
+<a id="__codelineno-31-58" name="__codelineno-31-58" href="#__codelineno-31-58"></a>  Key saved to ~/.nemoclaw/credentials.json (mode 600)
+<a id="__codelineno-31-59" name="__codelineno-31-59" href="#__codelineno-31-59"></a>
+<a id="__codelineno-31-60" name="__codelineno-31-60" href="#__codelineno-31-60"></a>
+<a id="__codelineno-31-61" name="__codelineno-31-61" href="#__codelineno-31-61"></a>  Cloud models:
+<a id="__codelineno-31-62" name="__codelineno-31-62" href="#__codelineno-31-62"></a>    1) Nemotron 3 Super 120B (nvidia/nemotron-3-super-120b-a12b)
+<a id="__codelineno-31-63" name="__codelineno-31-63" href="#__codelineno-31-63"></a>    2) Kimi K2.5 (moonshotai/kimi-k2.5)
+<a id="__codelineno-31-64" name="__codelineno-31-64" href="#__codelineno-31-64"></a>    3) GLM-5 (z-ai/glm5)
+<a id="__codelineno-31-65" name="__codelineno-31-65" href="#__codelineno-31-65"></a>    4) MiniMax M2.5 (minimaxai/minimax-m2.5)
+<a id="__codelineno-31-66" name="__codelineno-31-66" href="#__codelineno-31-66"></a>    5) GPT-OSS 120B (openai/gpt-oss-120b)
+<a id="__codelineno-31-67" name="__codelineno-31-67" href="#__codelineno-31-67"></a>    6) Other...
+<a id="__codelineno-31-68" name="__codelineno-31-68" href="#__codelineno-31-68"></a>
+<a id="__codelineno-31-69" name="__codelineno-31-69" href="#__codelineno-31-69"></a>  Choose model [1]:
+<a id="__codelineno-31-70" name="__codelineno-31-70" href="#__codelineno-31-70"></a>  Responses API available — OpenClaw will use openai-responses.
+<a id="__codelineno-31-71" name="__codelineno-31-71" href="#__codelineno-31-71"></a>  Using NVIDIA Endpoints with model: nvidia/nemotron-3-super-120b-a12b
+<a id="__codelineno-31-72" name="__codelineno-31-72" href="#__codelineno-31-72"></a>
+<a id="__codelineno-31-73" name="__codelineno-31-73" href="#__codelineno-31-73"></a>  [4/7] Setting up inference provider
+<a id="__codelineno-31-74" name="__codelineno-31-74" href="#__codelineno-31-74"></a>  ──────────────────────────────────────────────────
+<a id="__codelineno-31-75" name="__codelineno-31-75" href="#__codelineno-31-75"></a>✓ Active gateway set to &#39;nemoclaw&#39;
+<a id="__codelineno-31-76" name="__codelineno-31-76" href="#__codelineno-31-76"></a>✓ Created provider nvidia-prod
+<a id="__codelineno-31-77" name="__codelineno-31-77" href="#__codelineno-31-77"></a>Gateway inference configured:
+<a id="__codelineno-31-78" name="__codelineno-31-78" href="#__codelineno-31-78"></a>
+<a id="__codelineno-31-79" name="__codelineno-31-79" href="#__codelineno-31-79"></a>  Route: inference.local
+<a id="__codelineno-31-80" name="__codelineno-31-80" href="#__codelineno-31-80"></a>  Provider: nvidia-prod
+<a id="__codelineno-31-81" name="__codelineno-31-81" href="#__codelineno-31-81"></a>  Model: nvidia/nemotron-3-super-120b-a12b
+<a id="__codelineno-31-82" name="__codelineno-31-82" href="#__codelineno-31-82"></a>  Version: 1
+<a id="__codelineno-31-83" name="__codelineno-31-83" href="#__codelineno-31-83"></a>  Timeout: 60s (default)
+<a id="__codelineno-31-84" name="__codelineno-31-84" href="#__codelineno-31-84"></a>  ✓ Inference route set: nvidia-prod / nvidia/nemotron-3-super-120b-a12b
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>  [5/7] Creating sandbox
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>  ──────────────────────────────────────────────────
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>  Sandbox name (lowercase, numbers, hyphens) [my-assistant]: nemoclaw-sandbox
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>  Creating sandbox &#39;nemoclaw-sandbox&#39; (this takes a few minutes on first run)...
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>  Building image openshell/sandbox-from:1775161084 from /tmp/nemoclaw-build-fVVTwG/Dockerfile
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>  Step 1/36 : ARG BASE_IMAGE=ghcr.io/nvidia/nemoclaw/sandbox-base:latest
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>  Step 2/36 : FROM node:22-slim@sha256:4f77a690f2f8946ab16fe1e791a3ac0667ae1c3575c3e4d0d4589e9ed5bfaf3d AS builder
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>  Step 3/36 : COPY nemoclaw/package.json nemoclaw/tsconfig.json /opt/nemoclaw/
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>  Step 4/36 : COPY nemoclaw/src/ /opt/nemoclaw/src/
+<a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>  Step 5/36 : WORKDIR /opt/nemoclaw
+<a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a>  Step 6/36 : RUN npm install &amp;&amp; npm run build
+<a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a>  Step 7/36 : FROM ${BASE_IMAGE}
+<a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a>  Still building sandbox image... (60s elapsed)
+<a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a>  Still building sandbox image... (75s elapsed)
+<a id="__codelineno-32-15" name="__codelineno-32-15" href="#__codelineno-32-15"></a>  Still building sandbox image... (90s elapsed)
+<a id="__codelineno-32-16" name="__codelineno-32-16" href="#__codelineno-32-16"></a>  Still building sandbox image... (105s elapsed)
+<a id="__codelineno-32-17" name="__codelineno-32-17" href="#__codelineno-32-17"></a>  Still building sandbox image... (120s elapsed)
+<a id="__codelineno-32-18" name="__codelineno-32-18" href="#__codelineno-32-18"></a>  Still building sandbox image... (135s elapsed)
+<a id="__codelineno-32-19" name="__codelineno-32-19" href="#__codelineno-32-19"></a>  Step 8/36 : RUN (apt-get remove --purge -y gcc gcc-12 g++ g++-12 cpp cpp-12 make         netcat-openbsd netcat-traditional ncat 2&gt;/dev/null || true)     &amp;&amp; apt-get autoremove --purge -y     &amp;&amp; rm -rf /var/lib/apt/lists/*
+<a id="__codelineno-32-20" name="__codelineno-32-20" href="#__codelineno-32-20"></a>  Step 9/36 : COPY --from=builder /opt/nemoclaw/dist/ /opt/nemoclaw/dist/
+<a id="__codelineno-32-21" name="__codelineno-32-21" href="#__codelineno-32-21"></a>  Step 10/36 : COPY nemoclaw/openclaw.plugin.json /opt/nemoclaw/
+<a id="__codelineno-32-22" name="__codelineno-32-22" href="#__codelineno-32-22"></a>  Step 11/36 : COPY nemoclaw/package.json nemoclaw/package-lock.json /opt/nemoclaw/
+<a id="__codelineno-32-23" name="__codelineno-32-23" href="#__codelineno-32-23"></a>  Step 12/36 : COPY nemoclaw-blueprint/ /opt/nemoclaw-blueprint/
+<a id="__codelineno-32-24" name="__codelineno-32-24" href="#__codelineno-32-24"></a>  Step 13/36 : WORKDIR /opt/nemoclaw
+<a id="__codelineno-32-25" name="__codelineno-32-25" href="#__codelineno-32-25"></a>  Step 14/36 : RUN npm ci --omit=dev
+<a id="__codelineno-32-26" name="__codelineno-32-26" href="#__codelineno-32-26"></a>  Step 15/36 : RUN mkdir -p /sandbox/.nemoclaw/blueprints/0.1.0     &amp;&amp; cp -r /opt/nemoclaw-blueprint/* /sandbox/.nemoclaw/blueprints/0.1.0/
+<a id="__codelineno-32-27" name="__codelineno-32-27" href="#__codelineno-32-27"></a>  Step 16/36 : COPY scripts/nemoclaw-start.sh /usr/local/bin/nemoclaw-start
+<a id="__codelineno-32-28" name="__codelineno-32-28" href="#__codelineno-32-28"></a>  Step 17/36 : RUN chmod 755 /usr/local/bin/nemoclaw-start
+<a id="__codelineno-32-29" name="__codelineno-32-29" href="#__codelineno-32-29"></a>  Step 18/36 : ARG NEMOCLAW_MODEL=nvidia/nemotron-3-super-120b-a12b
+<a id="__codelineno-32-30" name="__codelineno-32-30" href="#__codelineno-32-30"></a>  Step 19/36 : ARG NEMOCLAW_PROVIDER_KEY=inference
+<a id="__codelineno-32-31" name="__codelineno-32-31" href="#__codelineno-32-31"></a>  Step 20/36 : ARG NEMOCLAW_PRIMARY_MODEL_REF=inference/nvidia/nemotron-3-super-120b-a12b
+<a id="__codelineno-32-32" name="__codelineno-32-32" href="#__codelineno-32-32"></a>  Step 21/36 : ARG CHAT_UI_URL=http://127.0.0.1:18789
+<a id="__codelineno-32-33" name="__codelineno-32-33" href="#__codelineno-32-33"></a>  Step 22/36 : ARG NEMOCLAW_INFERENCE_BASE_URL=https://inference.local/v1
+<a id="__codelineno-32-34" name="__codelineno-32-34" href="#__codelineno-32-34"></a>  Step 23/36 : ARG NEMOCLAW_INFERENCE_API=openai-responses
+<a id="__codelineno-32-35" name="__codelineno-32-35" href="#__codelineno-32-35"></a>  Step 24/36 : ARG NEMOCLAW_INFERENCE_COMPAT_B64=e30=
+<a id="__codelineno-32-36" name="__codelineno-32-36" href="#__codelineno-32-36"></a>  Step 25/36 : ARG NEMOCLAW_DISABLE_DEVICE_AUTH=1
+<a id="__codelineno-32-37" name="__codelineno-32-37" href="#__codelineno-32-37"></a>  Step 26/36 : ARG NEMOCLAW_BUILD_ID=1775161084265
+<a id="__codelineno-32-38" name="__codelineno-32-38" href="#__codelineno-32-38"></a>  Step 27/36 : ENV NEMOCLAW_MODEL=${NEMOCLAW_MODEL}     NEMOCLAW_PROVIDER_KEY=${NEMOCLAW_PROVIDER_KEY}     NEMOCLAW_PRIMARY_MODEL_REF=${NEMOCLAW_PRIMARY_MODEL_REF}     CHAT_UI_URL=${CHAT_UI_URL}     NEMOCLAW_INFERENCE_BASE_URL=${NEMOCLAW_INFERENCE_BASE_URL}     NEMOCLAW_INFERENCE_API=${NEMOCLAW_INFERENCE_API}     NEMOCLAW_INFERENCE_COMPAT_B64=${NEMOCLAW_INFERENCE_COMPAT_B64}     NEMOCLAW_DISABLE_DEVICE_AUTH=${NEMOCLAW_DISABLE_DEVICE_AUTH}
+<a id="__codelineno-32-39" name="__codelineno-32-39" href="#__codelineno-32-39"></a>  Step 28/36 : WORKDIR /sandbox
+<a id="__codelineno-32-40" name="__codelineno-32-40" href="#__codelineno-32-40"></a>  Step 29/36 : USER sandbox
+<a id="__codelineno-32-41" name="__codelineno-32-41" href="#__codelineno-32-41"></a>  Step 30/36 : RUN python3 -c &quot;import base64, json, os, secrets; from urllib.parse import urlparse; model = os.environ[&#39;NEMOCLAW_MODEL&#39;]; chat_ui_url = os.environ[&#39;CHAT_UI_URL&#39;]; provider_key = os.environ[&#39;NEMOCLAW_PROVIDER_KEY&#39;]; primary_model_ref = os.environ[&#39;NEMOCLAW_PRIMARY_MODEL_REF&#39;]; inference_base_url = os.environ[&#39;NEMOCLAW_INFERENCE_BASE_URL&#39;]; inference_api = os.environ[&#39;NEMOCLAW_INFERENCE_API&#39;]; inference_compat = json.loads(base64.b64decode(os.environ[&#39;NEMOCLAW_INFERENCE_COMPAT_B64&#39;]).decode(&#39;utf-8&#39;)); parsed = urlparse(chat_ui_url); chat_origin = f&#39;{parsed.scheme}://{parsed.netloc}&#39; if parsed.scheme and parsed.netloc else &#39;http://127.0.0.1:18789&#39;; origins = [&#39;http://127.0.0.1:18789&#39;]; origins = list(dict.fromkeys(origins + [chat_origin])); disable_device_auth = os.environ.get(&#39;NEMOCLAW_DISABLE_DEVICE_AUTH&#39;, &#39;&#39;) == &#39;1&#39;; allow_insecure = parsed.scheme == &#39;http&#39;; providers = {     provider_key: {         &#39;baseUrl&#39;: inference_base_url,         &#39;apiKey&#39;: &#39;unused&#39;,         &#39;api&#39;: inference_api,         &#39;models&#39;: [{**({&#39;compat&#39;: inference_compat} if inference_compat else {}), &#39;id&#39;: model, &#39;name&#39;: primary_model_ref, &#39;reasoning&#39;: False, &#39;input&#39;: [&#39;text&#39;], &#39;cost&#39;: {&#39;input&#39;: 0, &#39;output&#39;: 0, &#39;cacheRead&#39;: 0, &#39;cacheWrite&#39;: 0}, &#39;contextWindow&#39;: 131072, &#39;maxTokens&#39;: 4096}]     } }; config = {     &#39;agents&#39;: {&#39;defaults&#39;: {&#39;model&#39;: {&#39;primary&#39;: primary_model_ref}}},     &#39;models&#39;: {&#39;mode&#39;: &#39;merge&#39;, &#39;providers&#39;: providers},     &#39;channels&#39;: {&#39;defaults&#39;: {&#39;configWrites&#39;: False}},     &#39;gateway&#39;: {         &#39;mode&#39;: &#39;local&#39;,         &#39;controlUi&#39;: {             &#39;allowInsecureAuth&#39;: allow_insecure,             &#39;dangerouslyDisableDeviceAuth&#39;: disable_device_auth,             &#39;allowedOrigins&#39;: origins,         },         &#39;trustedProxies&#39;: [&#39;127.0.0.1&#39;, &#39;::1&#39;],         &#39;auth&#39;: {&#39;token&#39;: secrets.token_hex(32)}     } }; path = os.path.expanduser(&#39;~/.openclaw/openclaw.json&#39;); json.dump(config, open(path, &#39;w&#39;), indent=2); os.chmod(path, 0o600)&quot;
+<a id="__codelineno-32-42" name="__codelineno-32-42" href="#__codelineno-32-42"></a>  Step 31/36 : RUN openclaw doctor --fix &gt; /dev/null 2&gt;&amp;1 || true     &amp;&amp; openclaw plugins install /opt/nemoclaw &gt; /dev/null 2&gt;&amp;1 || true
+<a id="__codelineno-32-43" name="__codelineno-32-43" href="#__codelineno-32-43"></a>  Still building sandbox image... (470s elapsed)
+<a id="__codelineno-32-44" name="__codelineno-32-44" href="#__codelineno-32-44"></a>  Step 32/36 : USER root
+<a id="__codelineno-32-45" name="__codelineno-32-45" href="#__codelineno-32-45"></a>  Step 33/36 : RUN chown root:root /sandbox/.openclaw     &amp;&amp; find /sandbox/.openclaw -mindepth 1 -maxdepth 1 -exec chown -h root:root {} +     &amp;&amp; chmod 755 /sandbox/.openclaw     &amp;&amp; chmod 444 /sandbox/.openclaw/openclaw.json
+<a id="__codelineno-32-46" name="__codelineno-32-46" href="#__codelineno-32-46"></a>  Step 34/36 : RUN sha256sum /sandbox/.openclaw/openclaw.json &gt; /sandbox/.openclaw/.config-hash     &amp;&amp; chmod 444 /sandbox/.openclaw/.config-hash     &amp;&amp; chown root:root /sandbox/.openclaw/.config-hash
+<a id="__codelineno-32-47" name="__codelineno-32-47" href="#__codelineno-32-47"></a>  Step 35/36 : ENTRYPOINT [&quot;/usr/local/bin/nemoclaw-start&quot;]
+<a id="__codelineno-32-48" name="__codelineno-32-48" href="#__codelineno-32-48"></a>  Step 36/36 : CMD [&quot;/bin/bash&quot;]
+<a id="__codelineno-32-49" name="__codelineno-32-49" href="#__codelineno-32-49"></a>  Built image openshell/sandbox-from:1775161084
+<a id="__codelineno-32-50" name="__codelineno-32-50" href="#__codelineno-32-50"></a>  Uploading image into OpenShell gateway...
+<a id="__codelineno-32-51" name="__codelineno-32-51" href="#__codelineno-32-51"></a>  Pushing image openshell/sandbox-from:1775161084 into gateway &quot;nemoclaw&quot;
+<a id="__codelineno-32-52" name="__codelineno-32-52" href="#__codelineno-32-52"></a>  [progress] Exported 100 MiB
+<a id="__codelineno-32-53" name="__codelineno-32-53" href="#__codelineno-32-53"></a>  [progress] Exported 200 MiB
+<a id="__codelineno-32-54" name="__codelineno-32-54" href="#__codelineno-32-54"></a>  [progress] Exported 300 MiB
+<a id="__codelineno-32-55" name="__codelineno-32-55" href="#__codelineno-32-55"></a>  [progress] Exported 400 MiB
+<a id="__codelineno-32-56" name="__codelineno-32-56" href="#__codelineno-32-56"></a>  [progress] Exported 500 MiB
+<a id="__codelineno-32-57" name="__codelineno-32-57" href="#__codelineno-32-57"></a>  [progress] Exported 600 MiB
+<a id="__codelineno-32-58" name="__codelineno-32-58" href="#__codelineno-32-58"></a>  [progress] Exported 700 MiB
+<a id="__codelineno-32-59" name="__codelineno-32-59" href="#__codelineno-32-59"></a>  [progress] Exported 800 MiB
+<a id="__codelineno-32-60" name="__codelineno-32-60" href="#__codelineno-32-60"></a>  [progress] Exported 900 MiB
+<a id="__codelineno-32-61" name="__codelineno-32-61" href="#__codelineno-32-61"></a>  [progress] Exported 1000 MiB
+<a id="__codelineno-32-62" name="__codelineno-32-62" href="#__codelineno-32-62"></a>  [progress] Exported 1100 MiB
+<a id="__codelineno-32-63" name="__codelineno-32-63" href="#__codelineno-32-63"></a>  [progress] Exported 1142 MiB
+<a id="__codelineno-32-64" name="__codelineno-32-64" href="#__codelineno-32-64"></a>  Still uploading image into OpenShell gateway... (580s elapsed)
+<a id="__codelineno-32-65" name="__codelineno-32-65" href="#__codelineno-32-65"></a>  Still uploading image into OpenShell gateway... (585s elapsed)
+<a id="__codelineno-32-66" name="__codelineno-32-66" href="#__codelineno-32-66"></a>  Still uploading image into OpenShell gateway... (600s elapsed)
+<a id="__codelineno-32-67" name="__codelineno-32-67" href="#__codelineno-32-67"></a>  [progress] Uploaded to gateway
+<a id="__codelineno-32-68" name="__codelineno-32-68" href="#__codelineno-32-68"></a>  Still uploading image into OpenShell gateway... (625s elapsed)
+<a id="__codelineno-32-69" name="__codelineno-32-69" href="#__codelineno-32-69"></a>  Still uploading image into OpenShell gateway... (630s elapsed)
+<a id="__codelineno-32-70" name="__codelineno-32-70" href="#__codelineno-32-70"></a>  Image openshell/sandbox-from:1775161084 is available in the gateway.
+<a id="__codelineno-32-71" name="__codelineno-32-71" href="#__codelineno-32-71"></a>  Waiting for sandbox to become ready...
+<a id="__codelineno-32-72" name="__codelineno-32-72" href="#__codelineno-32-72"></a>  Sandbox reported Ready before create stream exited; continuing.
+<a id="__codelineno-32-73" name="__codelineno-32-73" href="#__codelineno-32-73"></a>  Waiting for sandbox to become ready...
+<a id="__codelineno-32-74" name="__codelineno-32-74" href="#__codelineno-32-74"></a>  Waiting for NemoClaw dashboard to become ready...
+<a id="__codelineno-32-75" name="__codelineno-32-75" href="#__codelineno-32-75"></a>  Dashboard taking longer than expected to start. Continuing...
+<a id="__codelineno-32-76" name="__codelineno-32-76" href="#__codelineno-32-76"></a>! No active forward found for port 18789
+<a id="__codelineno-32-77" name="__codelineno-32-77" href="#__codelineno-32-77"></a>✓ Forwarding port 18789 to sandbox nemoclaw-sandbox in the background
+<a id="__codelineno-32-78" name="__codelineno-32-78" href="#__codelineno-32-78"></a>  Access at: http://127.0.0.1:18789/
+<a id="__codelineno-32-79" name="__codelineno-32-79" href="#__codelineno-32-79"></a>  Stop with: openshell forward stop 18789 nemoclaw-sandbox
+<a id="__codelineno-32-80" name="__codelineno-32-80" href="#__codelineno-32-80"></a>  Setting up sandbox DNS proxy...
+<a id="__codelineno-32-81" name="__codelineno-32-81" href="#__codelineno-32-81"></a>Setting up DNS proxy in pod &#39;nemoclaw-sandbox&#39; (10.200.0.1:53 -&gt; 10.42.0.9)...
+<a id="__codelineno-32-82" name="__codelineno-32-82" href="#__codelineno-32-82"></a>  [PASS] DNS forwarder running (pid=326): dns-proxy: 10.200.0.1:53 -&gt; 10.42.0.9:53 pid=326
+<a id="__codelineno-32-83" name="__codelineno-32-83" href="#__codelineno-32-83"></a>  [PASS] resolv.conf -&gt; nameserver 10.200.0.1
+<a id="__codelineno-32-84" name="__codelineno-32-84" href="#__codelineno-32-84"></a>  [PASS] iptables: UDP 10.200.0.1:53 ACCEPT rule present
+<a id="__codelineno-32-85" name="__codelineno-32-85" href="#__codelineno-32-85"></a>  [PASS] getent hosts github.com -&gt; 140.82.121.3    github.com
+<a id="__codelineno-32-86" name="__codelineno-32-86" href="#__codelineno-32-86"></a>  DNS verification: 4 passed, 0 failed
+<a id="__codelineno-32-87" name="__codelineno-32-87" href="#__codelineno-32-87"></a>  ✓ Sandbox &#39;nemoclaw-sandbox&#39; created
+<a id="__codelineno-32-88" name="__codelineno-32-88" href="#__codelineno-32-88"></a>
+<a id="__codelineno-32-89" name="__codelineno-32-89" href="#__codelineno-32-89"></a>  [6/7] Setting up OpenClaw inside sandbox
+<a id="__codelineno-32-90" name="__codelineno-32-90" href="#__codelineno-32-90"></a>  ──────────────────────────────────────────────────
+<a id="__codelineno-32-91" name="__codelineno-32-91" href="#__codelineno-32-91"></a>  ✓ OpenClaw gateway launched inside sandbox
+<a id="__codelineno-32-92" name="__codelineno-32-92" href="#__codelineno-32-92"></a>
+<a id="__codelineno-32-93" name="__codelineno-32-93" href="#__codelineno-32-93"></a>  [7/7] Policy presets
+<a id="__codelineno-32-94" name="__codelineno-32-94" href="#__codelineno-32-94"></a>  ──────────────────────────────────────────────────
+<a id="__codelineno-32-95" name="__codelineno-32-95" href="#__codelineno-32-95"></a>
+<a id="__codelineno-32-96" name="__codelineno-32-96" href="#__codelineno-32-96"></a>  Available policy presets:
+<a id="__codelineno-32-97" name="__codelineno-32-97" href="#__codelineno-32-97"></a>    ○ discord — Discord API, gateway, and CDN access
+<a id="__codelineno-32-98" name="__codelineno-32-98" href="#__codelineno-32-98"></a>    ○ docker — Docker Hub and NVIDIA container registry access
+<a id="__codelineno-32-99" name="__codelineno-32-99" href="#__codelineno-32-99"></a>    ○ huggingface — Hugging Face Hub, LFS, and Inference API access
+<a id="__codelineno-32-100" name="__codelineno-32-100" href="#__codelineno-32-100"></a>    ○ jira — Jira and Atlassian Cloud access
+<a id="__codelineno-32-101" name="__codelineno-32-101" href="#__codelineno-32-101"></a>    ○ npm — npm and Yarn registry access (suggested)
+<a id="__codelineno-32-102" name="__codelineno-32-102" href="#__codelineno-32-102"></a>    ○ outlook — Microsoft Outlook and Graph API access
+<a id="__codelineno-32-103" name="__codelineno-32-103" href="#__codelineno-32-103"></a>    ○ pypi — Python Package Index (PyPI) access (suggested)
+<a id="__codelineno-32-104" name="__codelineno-32-104" href="#__codelineno-32-104"></a>    ○ slack — Slack API, Socket Mode, and webhooks access
+<a id="__codelineno-32-105" name="__codelineno-32-105" href="#__codelineno-32-105"></a>    ○ telegram — Telegram Bot API access
+<a id="__codelineno-32-106" name="__codelineno-32-106" href="#__codelineno-32-106"></a>
+<a id="__codelineno-32-107" name="__codelineno-32-107" href="#__codelineno-32-107"></a>  Apply suggested presets (pypi, npm)? [Y/n/list]: list
+<a id="__codelineno-32-108" name="__codelineno-32-108" href="#__codelineno-32-108"></a>  Enter preset names (comma-separated): discord,docker,npm,pypi,telegram
+<a id="__codelineno-32-109" name="__codelineno-32-109" href="#__codelineno-32-109"></a>✓ Policy version 2 submitted (hash: 3baeb66559af)
+<a id="__codelineno-32-110" name="__codelineno-32-110" href="#__codelineno-32-110"></a>✓ Policy version 2 loaded (active version: 2)
+<a id="__codelineno-32-111" name="__codelineno-32-111" href="#__codelineno-32-111"></a>  Applied preset: discord
+<a id="__codelineno-32-112" name="__codelineno-32-112" href="#__codelineno-32-112"></a>✓ Policy version 3 submitted (hash: a5f98eed9753)
+<a id="__codelineno-32-113" name="__codelineno-32-113" href="#__codelineno-32-113"></a>✓ Policy version 3 loaded (active version: 3)
+<a id="__codelineno-32-114" name="__codelineno-32-114" href="#__codelineno-32-114"></a>  Applied preset: docker
+<a id="__codelineno-32-115" name="__codelineno-32-115" href="#__codelineno-32-115"></a>✓ Policy version 4 submitted (hash: f29659941281)
+<a id="__codelineno-32-116" name="__codelineno-32-116" href="#__codelineno-32-116"></a>✓ Policy version 4 loaded (active version: 4)
+<a id="__codelineno-32-117" name="__codelineno-32-117" href="#__codelineno-32-117"></a>  Applied preset: npm
+<a id="__codelineno-32-118" name="__codelineno-32-118" href="#__codelineno-32-118"></a>✓ Policy version 5 submitted (hash: 1159751a4e39)
+<a id="__codelineno-32-119" name="__codelineno-32-119" href="#__codelineno-32-119"></a>✓ Policy version 5 loaded (active version: 5)
+<a id="__codelineno-32-120" name="__codelineno-32-120" href="#__codelineno-32-120"></a>  Applied preset: pypi
+<a id="__codelineno-32-121" name="__codelineno-32-121" href="#__codelineno-32-121"></a>✓ Policy version 6 submitted (hash: 3f5a1b42d227)
+<a id="__codelineno-32-122" name="__codelineno-32-122" href="#__codelineno-32-122"></a>✓ Policy version 6 loaded (active version: 6)
+<a id="__codelineno-32-123" name="__codelineno-32-123" href="#__codelineno-32-123"></a>  Applied preset: telegram
+<a id="__codelineno-32-124" name="__codelineno-32-124" href="#__codelineno-32-124"></a>
+<a id="__codelineno-32-125" name="__codelineno-32-125" href="#__codelineno-32-125"></a>  ──────────────────────────────────────────────────
+<a id="__codelineno-32-126" name="__codelineno-32-126" href="#__codelineno-32-126"></a>  Sandbox      nemoclaw-sandbox (Landlock + seccomp + netns)
+<a id="__codelineno-32-127" name="__codelineno-32-127" href="#__codelineno-32-127"></a>  Model        nvidia/nemotron-3-super-120b-a12b (NVIDIA Endpoints)
+<a id="__codelineno-32-128" name="__codelineno-32-128" href="#__codelineno-32-128"></a>  NIM          not running
+<a id="__codelineno-32-129" name="__codelineno-32-129" href="#__codelineno-32-129"></a>  ──────────────────────────────────────────────────
+<a id="__codelineno-32-130" name="__codelineno-32-130" href="#__codelineno-32-130"></a>  Run:         nemoclaw nemoclaw-sandbox connect
+<a id="__codelineno-32-131" name="__codelineno-32-131" href="#__codelineno-32-131"></a>  Status:      nemoclaw nemoclaw-sandbox status
+<a id="__codelineno-32-132" name="__codelineno-32-132" href="#__codelineno-32-132"></a>  Logs:        nemoclaw nemoclaw-sandbox logs --follow
+<a id="__codelineno-32-133" name="__codelineno-32-133" href="#__codelineno-32-133"></a>
+<a id="__codelineno-32-134" name="__codelineno-32-134" href="#__codelineno-32-134"></a>  OpenClaw UI (tokenized URL; treat it like a password)
+<a id="__codelineno-32-135" name="__codelineno-32-135" href="#__codelineno-32-135"></a>  Port 18789 must be forwarded before opening this URL.
+<a id="__codelineno-32-136" name="__codelineno-32-136" href="#__codelineno-32-136"></a>  http://127.0.0.1:18789/#token=...
+<a id="__codelineno-32-137" name="__codelineno-32-137" href="#__codelineno-32-137"></a>  ──────────────────────────────────────────────────
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>nemoclaw<span class="w"> </span>nemoclaw-sandbox<span class="w"> </span>connect
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>sandbox@nemoclaw-sandbox:~$<span class="w"> </span>openclaw<span class="w"> </span>tui
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>(node:2800) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>(Use `node --trace-warnings ...` to show where the warning was created)
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>(node:2808) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>(Use `node --trace-warnings ...` to show where the warning was created)
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>🦞 OpenClaw 2026.3.11 (29dc654) — I&#39;ve read more man pages than any human should—so you don&#39;t have to.
+<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>
+<a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a> openclaw tui - ws://127.0.0.1:18789 - agent main - session main
+<a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a> connecting | idle
+<a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a>
+<a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a> Pairing required. Run `openclaw devices list`, approve your request ID, then reconnect.
+<a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a> gateway disconnected: pairing required | pairing required: run openclaw devices list
+<a id="__codelineno-34-13" name="__codelineno-34-13" href="#__codelineno-34-13"></a> agent main | session main | unknown | tokens ?
 </code></pre></div>
 
 
