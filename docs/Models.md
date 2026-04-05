@@ -9,7 +9,8 @@ Pick your provider/model and make sure you can authenticate:
 - Hosted providers (OpenAI/Anthropic/Google/etc.): have your API key (and/or OAuth token) ready to paste during the installer.
 - Ollama (local models): install Ollama and pull the local model you want to run.
 
-[Continue to pre-installation.](PreInstallation.md)
+- **OpenClaw path:** [OpenClaw Prerequisites](OpenClaw/PreInstallation.md)
+- **NemoClaw path:** [NemoClaw Prerequisites](NemoClaw/PreInstallation.md)
 
 ## Paid Models
 

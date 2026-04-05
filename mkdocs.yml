@@ -30,7 +30,9 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
-    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
     - navigation.top
     - search.suggest
     - search.highlight
@@ -60,19 +62,25 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Getting Started:
-      - Host: Host.md
+  - Hosts:
+      - Ubuntu: Hosts/Ubuntu.md
+      - macOS: Hosts/MacOS.md
+      - Virtual Ubuntu: Hosts/VirtualUbuntu.md
+      - Hostinger VPS: Hosts/Hostinger.md
+      - NVIDIA Brev: Hosts/BrevNVIDIA.md
+      - Raspberry Pi: Hosts/RaspberryPi.md
+  - OpenClaw:
+      - Prerequisites: OpenClaw/PreInstallation.md
+      - Installation: OpenClaw/Installation.md
+  - NemoClaw:
+      - Prerequisites: NemoClaw/PreInstallation.md
+      - Installation: NemoClaw/Installation.md
+  - After Installation:
       - AI Models: Models.md
-      - Pre-installation: PreInstallation.md
-      - Install OpenClaw: Installation.md
-      - Before Installing NemoClaw: before-installing-nvidia-nemoclaw.md
-      - Install NemoClaw: InstallationNemo.md
       - Onboarding: Onboarding.md
       - Skills: Skills.md
-  - Configuration:
       - Identities: Identities.md
       - Security: Security.md
-  - Reference:
       - Tools: Tools.md
       - Costs: TokenOptimizationGuide.md
       - Dictionary: Dictonary.md

@@ -92,7 +92,7 @@ Is optional, but could prove useful.
 └
 ```
 
-> Normally you should have installed Homebrew during the [pre-installation](PreInstallation.md) phase.
+> Normally you should have installed Homebrew during the [pre-installation](OpenClaw/PreInstallation.md) phase.
 
 If not do it now.
 
