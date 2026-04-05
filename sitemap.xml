@@ -2,58 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/</loc>
-         <lastmod>2026-04-04</lastmod>
+         <lastmod>2026-04-05</lastmod>
     </url>
     <url>
          <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/Dictonary/</loc>
-         <lastmod>2026-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/Host/</loc>
-         <lastmod>2026-04-04</lastmod>
+         <lastmod>2026-04-05</lastmod>
     </url>
     <url>
          <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/Identities/</loc>
-         <lastmod>2026-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/Installation/</loc>
-         <lastmod>2026-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/InstallationNemo/</loc>
-         <lastmod>2026-04-04</lastmod>
+         <lastmod>2026-04-05</lastmod>
     </url>
     <url>
          <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/Models/</loc>
-         <lastmod>2026-04-04</lastmod>
+         <lastmod>2026-04-05</lastmod>
     </url>
     <url>
          <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/Onboarding/</loc>
-         <lastmod>2026-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/PreInstallation/</loc>
-         <lastmod>2026-04-04</lastmod>
+         <lastmod>2026-04-05</lastmod>
     </url>
     <url>
          <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/Security/</loc>
-         <lastmod>2026-04-04</lastmod>
+         <lastmod>2026-04-05</lastmod>
     </url>
     <url>
          <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/Skills/</loc>
-         <lastmod>2026-04-04</lastmod>
+         <lastmod>2026-04-05</lastmod>
     </url>
     <url>
          <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/TokenOptimizationGuide/</loc>
-         <lastmod>2026-04-04</lastmod>
+         <lastmod>2026-04-05</lastmod>
     </url>
     <url>
          <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/Tools/</loc>
-         <lastmod>2026-04-04</lastmod>
+         <lastmod>2026-04-05</lastmod>
     </url>
     <url>
-         <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/before-installing-nvidia-nemoclaw/</loc>
-         <lastmod>2026-04-04</lastmod>
+         <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/Hosts/BrevNVIDIA/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/Hosts/Hostinger/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/Hosts/MacOS/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/Hosts/RaspberryPi/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/Hosts/Ubuntu/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/Hosts/VirtualUbuntu/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/NemoClaw/Installation/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/NemoClaw/PreInstallation/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/OpenClaw/Installation/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://www.finnpedersenfrance.com/OpenClawGettingStarted/OpenClaw/PreInstallation/</loc>
+         <lastmod>2026-04-05</lastmod>
     </url>
 </urlset>
